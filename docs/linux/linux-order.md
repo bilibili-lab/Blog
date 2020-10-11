@@ -120,7 +120,7 @@ drwxr-xr-x   5 root root 4096 Sep 14 10:14 .npm
 常用 `options`
  - `-p` 递归创建目录
 
-```bash{2, 5}
+```sh
 
 # 创建 test 的文件夹
 
@@ -220,7 +220,7 @@ echo -e "\e[43;35m Linux\e[0m hello word"
  
 由于自定义别名是临时生效, 系统重启后将不能再使用。可以如下三步永久生效。
 
-```sh{2, 5, 8}
+```sh
 // 第一步
 [root@iZm5eeens8iab3xz6f0rfiZ ~]# vi ~/.bashrc
 

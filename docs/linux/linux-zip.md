@@ -23,7 +23,7 @@
  - 压缩目录  
    - `zip  -r 压缩后的文件.zip  压缩前文件名 `
    - `-r  递归压缩`
- ```sh{1,2,3}
+ ```sh
 [root@iZm5eeens8iab3xz6f0rfiZ ~]# mkdir book
 [root@iZm5eeens8iab3xz6f0rfiZ ~]# touch ./book/text.txt
 [root@iZm5eeens8iab3xz6f0rfiZ ~]# zip -r book.zip book

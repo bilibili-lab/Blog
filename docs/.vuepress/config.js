@@ -174,6 +174,9 @@ module.exports = {
           children: [
             'linux-net',
             'linux-net-config',
+            'linux-net-env',
+            'linux-net-test',
+            'linux-net-ssh',
           ]
         },
         {
