@@ -7,6 +7,12 @@ module.exports = {
   themeConfig: {
     lastUpdated: '上次更新', // string | boolean
   },
+  plugins: [
+    // require('@vuepress/back-to-top'),
+    // require('@vuepress/last-updated'),
+    // require('@vuepress/blog')
+  ],
+
   themeConfig: {
     smoothScroll: true,
 
@@ -113,14 +119,15 @@ module.exports = {
         'nginx-others',
       ],
       "/docker/": [
-        {
-          title: "docker",
-          collapsable: false,
-          sidebarDepth: 2,
-          children: [
-            ''
-          ]
-        },
+        ""
+        // {
+        //   title: "docker",
+        //   collapsable: false,
+        //   sidebarDepth: 2,
+        //   children: [
+        //     ''
+        //   ]
+        // },
       ],
       "/linux/": [
         {

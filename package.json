@@ -9,5 +9,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.6.0",
+    "@vuepress/plugin-blog": "^1.9.2"
+  }
 }
