@@ -157,9 +157,13 @@ $ docker version
 | build | 根据 `docker` 构建镜像|  |
 
 ::: warning
-用户既可以使用 `docker load` 来带入镜像存储文件到本地镜像库，也可以使用 `docker import` 来导入一个容器快照到本地镜像仓库。
-这两者的区别在于容器快照文件将丢弃所有的历史记录和元数据信息（即仅保存容器当时的快照状态）， 而镜像存储文件将保存完整的记录，
-体积也大，此外，从容器快照文件导入时可以重新指定标签等元数据信息。
+
+* 用户既可以使用 `docker load` 来带入镜像存储文件到本地镜像库，也可以使用 `docker import` 来导入一个容器快照到本地镜像仓库。
+
+* 这两者的区别在于容器快照文件将丢弃所有的历史记录和元数据信息（即仅保存容器当时的快照状态）， 而镜像存储文件将保存完整的记录，体积也大。
+
+* 此外，从容器快照文件导入时可以重新指定标签等元数据信息。
+
 :::
 
 ### docker image ls
@@ -218,6 +222,18 @@ docker.io/library/ubuntu:latest
 * `docker.io/hello-world` 是 `image` 文件在仓库里面的位置，其中 `docker.io` 是 `image` 的作者， `hello-world` 是 `image` 文件的名字。
 
 * `Docker` 官方提供的 `image` 文件，都放在 `docker.io` 组里面，所以他是默认组，可以省略 `docker image pull hello-world`
+
+### 查看镜像的历史信息
+
+``` sh
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker image history ubuntu
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+9140108b62dc        2 weeks ago         /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B                  
+<missing>           2 weeks ago         /bin/sh -c mkdir -p /run/systemd && echo 'do…   7B                  
+<missing>           2 weeks ago         /bin/sh -c [ -z "$(apt-get indextargets)" ]     0B                  
+<missing>           2 weeks ago         /bin/sh -c set -xe   && echo '#!/bin/sh' > /…   811B                
+<missing>           2 weeks ago         /bin/sh -c #(nop) ADD file:da80f59399481ffc3…   72.9MB    
+```
 
 ### 查看镜像的详细信息
 
@@ -323,6 +339,52 @@ docker.io/library/ubuntu:latest
 docker rmi hello-world
 ```
 
+### import和export
+
+* `export` 导出容器到文件。
+
+* `import` 把文件导入为镜像。
+
+``` sh
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker container run ubuntu
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker container ps -al
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                      PORTS               NAMES
+1bc2e2ae106a        ubuntu              "/bin/bash"         21 seconds ago      Exited (0) 19 seconds ago                       youthful_varahamihira
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker  export -o  ubuntu.tar 1bc2e2ae106a
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# ls  | grep ubuntu.tar
+ubuntu.tar
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker import ubuntu.tar -m "new" my/myubuntu
+sha256:57e1ced135bc7895b9d5a1a8166fc1bb927838db31ccf6fd0b41f437e2f5ad85
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker image ls 
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+my/myubuntu         latest              57e1ced135bc        12 seconds ago      72.9MB
+myubuntu            v1                  39605eb3b48d        55 minutes ago      72.9MB
+```
+
+### save和load
+
+* `save` 保存镜像所有的信息-包含历史。
+
+* `load` 只导出当前的信息。
+
+``` sh
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker image ls
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hello-world         latest              bf756fb1ae65        9 months ago        13.3kB
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker save -o my-hello-world.tar hello-world  
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# ls  | grep my-hello-world.tar
+my-hello-world.tar
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker image rmi -f  hello-world 
+Untagged: hello-world:latest
+Untagged: hello-world@sha256:4cf9c47f86df71d48364001ede3a4fcd85ae80ce02ebad74156906caff5378bc
+Deleted: sha256:bf756fb1ae65adf866bd8c456593cd24beb6a0a061dedf42b26a993176745f6b
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker load -i  my-hello-world.tar
+Loaded image: hello-world:latest
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker image ls 
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hello-world         latest              bf756fb1ae65        9 months ago        13.3kB
+```
+
 ## 容器
 
 * `docker run` 命令会从 `image` 文件， 生成一个正在运行的容器实例。
@@ -387,7 +449,21 @@ docker run ubuntu /bin/echo "Hello world"
 |--mount   mount       |挂载宿主机分区到容器|
 |-v  --volumn  list    |挂载宿主机分区到容器|
 
+### 运行交互式的容器
+
+``` sh
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker run -it ubuntu /bin/bash 
+root@9cf4fe02207a:/# cd /root
+root@9cf4fe02207a:~# touch a.txt
+root@9cf4fe02207a:~# exit   # 退出容器
+exit
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# 
+```
+
 ### 查看容器
+
+* `docker container ps` 默认只展示正在运行的容器。
+* 显示所有的容器（运行和停止） `-a` 。
 
 ``` sh
 [root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker container ps -al
