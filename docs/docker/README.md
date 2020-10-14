@@ -149,12 +149,24 @@ $ docker version
 | push | 推动一个镜像到镜像仓库  | docker push [imageName] |
 | rmi | 删除镜像  | docker rmi [imageName] |
 | prune | 移除未使用的镜像， 没有标记或任何容器引用  | docker image prune |
+| tag | 标记本地镜像, 将其归入某一个仓库  | docker image tag [imageName][username]/[repository]:[tag]|
+| export | 导出容器文件系统 `tar` 归档文件创建镜像 | docker export -o mysqlv1.tar a404c6c174a2|
+| import | 导入容器快照文件系统 `tar` 归档文件创建镜像 | docker import -o mysqlv1.tar qianduan/mysql:v2|
+| save | 保存一个或多个镜像到一个 `tar` 归档文件 | docker save -o  mysqlv2.tar qianduan/mysqlv2:v3|
+| load | 加载镜像存储文件来自 `tar` 归档或者标准输入 | docker load -i mysqlv2:tar |
+| build | 根据 `docker` 构建镜像|  |
+
+::: warning
+用户既可以使用 `docker load` 来带入镜像存储文件到本地镜像库，也可以使用 `docker import` 来导入一个容器快照到本地镜像仓库。
+这两者的区别在于容器快照文件将丢弃所有的历史记录和元数据信息（即仅保存容器当时的快照状态）， 而镜像存储文件将保存完整的记录，
+体积也大，此外，从容器快照文件导入时可以重新指定标签等元数据信息。
+:::
 
 ### docker image ls
 
 ``` sh
 [root@iZm5eeens8iab3xz6f0rfiZ ~]# systemctl start docker.service
-[root@iZm5eeens8iab3xz6f0rfiZ ~]# docker image ls 
+[root@iZm5eeenbs8iab3xz6f0rfiZ ~]# docker image ls 
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 node                latest              173eeb895217        9 days ago          943MB
 nginx               latest              7e4d58f0e5f3        10 days ago         133MB
@@ -187,22 +199,127 @@ mongo-express                          Web-based MongoDB admin interface, writte
 |STARS       |星星数|
 | OFFICIAL   |是否是官方源|
 
-
-
 ### 拉取镜像
 
-```sh
-docker pull docker.io/hello-world
+``` sh
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker image  pull ubuntu
+Using default tag: latest
+latest: Pulling from library/ubuntu
+a95689b8e6cb: Download complete 
+1a0022e444c2: Download complete 
+32b7488a3833: Download complete 
+Digest: sha256:bc2f7250f69267c9c6b66d7b6a81a54d3878bb85f1ebb5f951c896d13e6ba537
+Status: Downloaded newer image for ubuntu:latest
+docker.io/library/ubuntu:latest
 ```
-- `docker image pull`是抓取`image`文件的命令。
 
-- `docker.io/hello-world`是`image`文件在仓库里面的位置，其中`docker.io`是`image`的作者，`hello-world`是`image`文件的名字。
+* `docker image pull` 是抓取 `image` 文件的命令。
 
-- `Docker`官方提供的`image`文件，都放在`docker.io`组里面，所以他是默认组，可以省略`docker image pull hello-world`
+* `docker.io/hello-world` 是 `image` 文件在仓库里面的位置，其中 `docker.io` 是 `image` 的作者， `hello-world` 是 `image` 文件的名字。
+
+* `Docker` 官方提供的 `image` 文件，都放在 `docker.io` 组里面，所以他是默认组，可以省略 `docker image pull hello-world`
+
+### 查看镜像的详细信息
+
+``` sh
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker image inspect ubuntu
+[
+    {
+        "Id": "sha256:9140108b62dc87d9b278bb0d4fd6a3e44c2959646eb966b86531306faa81b09b",
+        "RepoTags": [
+            "ubuntu:latest"
+        ],
+        "RepoDigests": [
+            "ubuntu@sha256:bc2f7250f69267c9c6b66d7b6a81a54d3878bb85f1ebb5f951c896d13e6ba537"
+        ],
+        "Parent": "",
+        "Comment": "",
+        "Created": "2020-09-25T22:34:30.295807036Z",
+        "Container": "1046a5d685aef5c37d1829040ca8083b94e4c069ca4963f4b16a6ade2e077b06",
+        "ContainerConfig": {
+            "Hostname": "1046a5d685ae",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "/bin/sh",
+                "-c",
+                "#(nop) ",
+                "CMD [\"/bin/bash\"]"
+            ],
+            "ArgsEscaped": true,
+            "Image": "sha256:4ff2090064e7e38688bce713d50f3202d227b3c89fecea1434271c912ccd47e0",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {}
+        },
+        "DockerVersion": "18.09.7",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "/bin/bash"
+            ],
+            "ArgsEscaped": true,
+            "Image": "sha256:4ff2090064e7e38688bce713d50f3202d227b3c89fecea1434271c912ccd47e0",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 72875723,
+        "VirtualSize": 72875723,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/4c837e528b1c7846646a1654de43cc22ab3ea6e8a520f5e55748666703273208/diff:/var/lib/docker/overlay2/8c280d4fed0d7ab2674855083d0de12cb9cb4c00bc075bb0ff6a34d7158c2559/diff",
+                "MergedDir": "/var/lib/docker/overlay2/a86ce81b59de68c37663108a0a549a59215e3d5c6d6173fb0dead7f469accaa5/merged",
+                "UpperDir": "/var/lib/docker/overlay2/a86ce81b59de68c37663108a0a549a59215e3d5c6d6173fb0dead7f469accaa5/diff",
+                "WorkDir": "/var/lib/docker/overlay2/a86ce81b59de68c37663108a0a549a59215e3d5c6d6173fb0dead7f469accaa5/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:d42a4fdf4b2ae8662ff2ca1b695eae571c652a62973c1beb81a296a4f4263d92",
+                "sha256:90ac32a0d9ab11e7745283f3051e990054616d631812ac63e324c1a36d2677f5",
+                "sha256:782f5f011ddaf2a0bfd38cc2ccabd634095d6e35c8034302d788423f486bb177"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]
+```
 
 ### 删除镜像
 
-```sh
+``` sh
 docker rmi hello-world
 ```
 
@@ -229,16 +346,109 @@ docker rmi hello-world
 | run | 从镜像运行一个容器 | docker run hello-world |
 | ls  | 列出容器  | docker container  ls |
 | inspect  | 显示一个或者多个容器详细信息  | docker inspect |
+| attach  | 要attach上去的容器必须正在运行，可以同时连接上同一个 `container` 来共享屏幕 | docker attach |
+| stats  | 显示容器资源使用统计 | docker container stats |
+| top  | 显示一个容器运行的进程 | docker container top |
+| update  | 显示一个容器运行的进程 | docker container update |
+| port  | 更新一个或多个容器配置 | docker container port |
+| ps  | 查看当前运行的容器 | docker ps -a -l |
+| kill [containerId]  | 终止容器（发送SIGKILL） | docker kill [containerId] |
+| rm [containerId]  | 删除容器 | docker rm [containerId] |
+| start [containerId]  | 启动已经生成、已经停止运行的容器文件 | docker start [containerId] |
+| stop [containerId]  | 终止容器运行（发送 SIGTERM） | docker stop [containerId] |
+| logs [containerId]  | 查看 `docker` 容器的输出 | docker logs [containerId] |
+| exec [containerId]  | 进入一个正在运行的 `docker` 容器执行命令 | docker container  exec  -it [containerId] /bin/bash|
+| cp [containerId]  | 从正在运行的 `Dokcer` 容器里，将文件拷贝到本地 | docker container  cp -it [containerId]:app/package.josn|
+| commit [containerId]  | 创建一个新镜像来自容器 | docker container  commit -a “qianduan” -m “mysql” 5da48d5a1349　mynginx:v1|
 
 ### 启动容器
 
+``` sh
+docker run ubuntu /bin/echo "Hello world"
+```
+
+* `docker: Docker` 的二进制执行文件。
+
+* `run:` 与前面的 `docker` 组合起来运行一个容器。
+
+* `ubuntu` 指定要运行的镜像， `Docker` 首先从本地主机上查找镜像是否存在，如果不存在， `Docker` 就会从镜像仓库 `Docker hub` 下载公共镜像。
+
+* `/bin/echo Hello world` 在容器里执行的命令。
+
+|参数|含义|
+|---|---|
+|-i --interactive      |交互式|
+|-t --tty              |分配一个伪终端|
+|-d --detach           |运行容器到后台|
+|-a --attch list       |附加到运行的容器|
+|-e --env list         |设置环境变量|
+|-p --public list      |发布容器到主机|
+|-P                    |--public-all |
+|--mount   mount       |挂载宿主机分区到容器|
+|-v  --volumn  list    |挂载宿主机分区到容器|
+
 ### 查看容器
 
-## 运行交互式的容器
+``` sh
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker container ps -al
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                    PORTS               NAMES
+5da48d5a1349        hello-world         "/hello"            46 hours ago        Exited (0) 46 hours ago                       elastic_allen
+```
+
+* `-a` 显示所有的容器，包括已停止的。
+
+* `-l` 显示最新的那个容器。
+
+|字段|含义|
+|--|---|
+|CONRAINER ID|容器ID|
+|IAMGE       |使用的镜像|
+|COMMAND     |使用的命令|
+|CREATED     |创建时间|
+|STATUS      |状态|
+|PORTS       |端口号|
+|NAMES       |自动分配的名称|
 
 ## 后台运行容器
 
+``` sh
+root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker run -d -p 8080:80 nginx
+```
+
 ## kill
+
+``` sh
+docker stop　5da48d5a1349　   # 给容器发送结束信号
+docker kill　5da48d5a1349　　　# 直接停止 ，不发请求
+```
+
+### 删除容器
+
+``` sh
+root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker container rm 5da48d5a1349  # 删除指定id容器
+root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker container rm $( docker ps -a -q )  # 删除所有的容器
+
+```
+
+### 创建一个新的镜像
+
+* 创建一个新镜像来自容器。
+
+``` sh
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker container ls -al
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                      PORTS               NAMES
+3bea777f1408        9140108b62dc        "/bin/bash"         18 seconds ago      Exited (0) 18 seconds ago                       jovial_kepler
+# -a 指定作者
+# -m 指定注释
+# myubuntu:v1  myubuntu 镜像的名字 v1指定镜像的tag
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker commit -a "wo" -m "dierban" 3bea777f1408 myubuntu:v1
+sha256:39605eb3b48d5c5defd5aa484070e14b9e99706b5dd1078ce4e3ca0a9d9fb821
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker image ls
+REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
+myubuntu            v1                  39605eb3b48d        3 seconds ago        72.9MB
+ubuntu              latest              9140108b62dc        2 weeks ago          72.9MB
+hello-world         latest              bf756fb1ae65        9 months ago         13.3kB
+```
 
 ## compose
 
