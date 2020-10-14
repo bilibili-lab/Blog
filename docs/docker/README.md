@@ -409,13 +409,13 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 |PORTS       |端口号|
 |NAMES       |自动分配的名称|
 
-## 后台运行容器
+### 后台运行容器
 
 ``` sh
 root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker run -d -p 8080:80 nginx
 ```
 
-## kill
+### kill
 
 ``` sh
 docker stop　5da48d5a1349　   # 给容器发送结束信号
