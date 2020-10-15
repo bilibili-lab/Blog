@@ -139,6 +139,8 @@ $ docker version
 
 * 我们可以通过 `docker history <ID/NAME>` 查看镜像中的各层内容及大小。每层对应着 `Dockerfile` 中的一条指令。
 
+### 命令
+
 | 命令     | 含义 |  语法 |     
 | :--------- | :-- | --- |  
 | ls | 查看全部镜像 | docker image ls |
@@ -166,7 +168,7 @@ $ docker version
 
 :::
 
-### docker image ls
+### 查看本地镜像
 
 ``` sh
 [root@iZm5eeens8iab3xz6f0rfiZ ~]# systemctl start docker.service
@@ -185,7 +187,7 @@ hello-world         latest              bf756fb1ae65        8 months ago        
 | CREATED   |创建时间|
 | SIZE      |镜像大小|
 
-### 查看镜像
+### 查找镜像
 
 ``` sh
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
@@ -387,7 +389,7 @@ hello-world         latest              bf756fb1ae65        9 months ago        
 
 ## 容器
 
-* `docker run` 命令会从 `image` 文件， 生成一个正在运行的容器实例。
+* `  run` 命令会从 `image` 文件， 生成一个正在运行的容器实例。
 
 * `docker container run` 命令具有自动抓取 `image` 文件的功能。如果发现本地没有指定的 `image` 文件，就会自动从仓库拉去。
 
@@ -408,20 +410,26 @@ hello-world         latest              bf756fb1ae65        9 months ago        
 | run | 从镜像运行一个容器 | docker run hello-world |
 | ls  | 列出容器  | docker container  ls |
 | inspect  | 显示一个或者多个容器详细信息  | docker inspect |
-| attach  | 要attach上去的容器必须正在运行，可以同时连接上同一个 `container` 来共享屏幕 | docker attach |
 | stats  | 显示容器资源使用统计 | docker container stats |
 | top  | 显示一个容器运行的进程 | docker container top |
 | update  | 显示一个容器运行的进程 | docker container update |
-| port  | 更新一个或多个容器配置 | docker container port |
+| port  | 列出指定的容器的端口映射 | docker container port |
 | ps  | 查看当前运行的容器 | docker ps -a -l |
 | kill [containerId]  | 终止容器（发送SIGKILL） | docker kill [containerId] |
 | rm [containerId]  | 删除容器 | docker rm [containerId] |
 | start [containerId]  | 启动已经生成、已经停止运行的容器文件 | docker start [containerId] |
 | stop [containerId]  | 终止容器运行（发送 SIGTERM） | docker stop [containerId] |
 | logs [containerId]  | 查看 `docker` 容器的输出 | docker logs [containerId] |
+| attach              | 要attach上去的容器必须正在运行，可以同时连接上同一个 `container` 来共享屏幕 | docker attach |
 | exec [containerId]  | 进入一个正在运行的 `docker` 容器执行命令 | docker container  exec  -it [containerId] /bin/bash|
 | cp [containerId]  | 从正在运行的 `Dokcer` 容器里，将文件拷贝到本地 | docker container  cp -it [containerId]:app/package.josn|
 | commit [containerId]  | 创建一个新镜像来自容器 | docker container  commit -a “qianduan” -m “mysql” 5da48d5a1349　mynginx:v1|
+
+* `docker` 容器的主线程 `(dockfile中CMD执行名称)` 结束，容器就会推出。
+
+   - 以交互式启动 `docker run -i [CONTAINER_NAME or CONTAINER_ID]`
+   - tty选项 `docker run -dit [CONTAINER_NAME or CONTAINER_ID]`
+   - 守护态(Daemonized)形式运行 `docker run -d ubuntu /bin/sh -c "while true; do echo hello world;sleep1;done"`
 
 ### 启动容器
 
@@ -437,6 +445,8 @@ docker run ubuntu /bin/echo "Hello world"
 
 * `/bin/echo Hello world` 在容器里执行的命令。
 
+* 选项
+
 |参数|含义|
 |---|---|
 |-i --interactive      |交互式|
@@ -448,6 +458,7 @@ docker run ubuntu /bin/echo "Hello world"
 |-P                    |--public-all |
 |--mount   mount       |挂载宿主机分区到容器|
 |-v  --volumn  list    |挂载宿主机分区到容器|
+|-rm                   |一旦容器运行完，就自动删除容器文件|
 
 ### 运行交互式的容器
 
@@ -491,6 +502,36 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker run -d -p 8080:80 nginx
 ```
 
+### -p与-P
+
+docker容器在启动的时候，如果不指定端口映射参数，在容器外部是无法通过网络来访问容器内的网络应用和服务的。
+
+* `-p` 小写
+
+则可以指定要映射的IP和端口，但是在一个指定端口上只可以绑定一个容器。
+
+``` sh
+root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker run -p 8080:80 nginx
+```
+
+* `-P` 小写
+
+Docker 会随机映射一个 49000~49900 的端口到内部容器开放的网络端口。
+
+``` sh
+root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker run -P 8080:80 nginx
+```
+
+### env
+
+* 指定环境变量。
+
+``` sh
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker  run -it -e name=qianduan ubuntu
+root@e3c27091fe81:/# echo $name
+qianduan
+```
+
 ### kill
 
 ``` sh
@@ -503,7 +544,51 @@ docker kill　5da48d5a1349　　　# 直接停止 ，不发请求
 ``` sh
 root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker container rm 5da48d5a1349  # 删除指定id容器
 root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker container rm $( docker ps -a -q )  # 删除所有的容器
+```
 
+### 自动删除容器
+
+* 在执行 `docker run` 的时候如果添加 `--rm` 参数，则容器终止后会立刻删除。
+
+* `--rm` 参数和 `-d` 参数不能同时使用。
+
+``` sh
+root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker run -it --rm ubuntu /bin/bash
+```
+
+### 进入一个正在运行的容器
+
+进入Docker容器比较常见的几种做法如下：
+
+* docker attach
+
+``` sh
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker run -itd ubuntu /bin/bash  
+0206a0d51735d9dea6d8a42387570c67f58fb09b1414e1c813478698a2999f44
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]#  docker container ps
+CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS              PORTS               NAMES
+0206a0d51735        ubuntu              "/bin/bash"         About a minute ago   Up About a minute                       optimistic_saha
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker attach  0206a0d51735d9dea6d8a42387570c67f58fb09b1414e1c813478698a2999f44
+root@0206a0d51735:/# 
+```
+
+但在，使用该命令有一个问题。当多个窗口同时使用该命令进入该容器时，所有的窗口都会同步显示。如果有一个窗口阻塞了，那么其他窗口也无法再进行操作。
+因为这个原因，所以docker attach命令不太适合于生产环境，平时自己开发应用时可以使用该命令。
+
+* docker exec
+
+docker在1.3. X版本之后还提供了一个新的命令exec用于进入容器，这种方式相对更简单一些。
+
+``` sh
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]#  docker container  exec -it 0206a0d51735d9dea6d8a42387570c67f58fb09b1414e1c813478698a2999f44 /bin/bash
+```
+
+### 拷贝文件
+
+* 从容器内拷贝文件到主机上。
+
+``` sh
+docker cp 4db8edd86202:/usr/share/elasticsearch/config/elasticsearch.yml /home/haopeng/es
 ```
 
 ### 创建一个新的镜像
@@ -517,7 +602,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 # -a 指定作者
 # -m 指定注释
 # myubuntu:v1  myubuntu 镜像的名字 v1指定镜像的tag
-[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker commit -a "wo" -m "dierban" 3bea777f1408 myubuntu:v1
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker  container commit -a "wo" -m "dierban" 3bea777f1408 myubuntu:v1
 sha256:39605eb3b48d5c5defd5aa484070e14b9e99706b5dd1078ce4e3ca0a9d9fb821
 [root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker image ls
 REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
