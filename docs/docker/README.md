@@ -123,6 +123,10 @@ $ docker version
 
 ## 阿里云加速
 
+## docker命令参考
+
+[官方参考](https://docs.docker.com/engine/reference/commandline/docker/)
+
 ## image镜像
 
 * `Docker` 把应用程序及其依赖，打包在 `image` 文件里面。只有通过这个文件，才能生成 `Docker` 容器。
@@ -611,22 +615,218 @@ ubuntu              latest              9140108b62dc        2 weeks ago         
 hello-world         latest              bf756fb1ae65        9 months ago         13.3kB
 ```
 
-## compose
+## commit制作个性化镜像
+
+- `docker container commit` 从容器创建一个新的镜像。
+
+-  `docker container commit [options] CONTAINER [REPOSITORY [:TAG]]`
+
+   - `-a` 提交的镜像作者。
+
+   - `-c` 使用`Dockerfile`来创建镜像
+
+   - `-m` 提交时的说明文字。
+
+   - `-p` 在`commit`时将，将容器暂停。
+
+- 停止容器后不会自动删除容器， 除非在启动容器的时候指定了`--rm`标志。
+
+- 使用`docker ps -a` 命令查看`Docker`主机上包含停止的容器在内的所有容器。
+
+-  停止状态的容器的可写层仍然占用磁盘。要清理可以使用`docker container prune`命令。
+
+```sh
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# runoob@runoob:~$ docker commit -a "runoob.com" -m "my apache" a404c6c174a2  mymysql:v1 
+sha256:37af1236adef1544e8886be23010b66577647a40bc02c0885a6600b33ee28057
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# runoob@runoob:~$ docker images mymysql:v1
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+mymysql             v1                  37af1236adef        15 seconds ago      329 MB
+```
+
+## 制作Dockerfile
+
+- `Docker` 的镜像是一层一层的文件组成作用。
+
+- `docker inspect` 命令可以查看镜像或者容器。
+
+- `Layers`就是镜像的层文件，只能读不能修改。基于镜像创建的容器会共享这些文件层。
+
+```sh
+``` sh
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker image inspect ubuntu
+[
+    {
+        "Id": "sha256:9140108b62dc87d9b278bb0d4fd6a3e44c2959646eb966b86531306faa81b09b",
+        "RepoTags": [
+            "ubuntu:latest"
+        ],
+        ...
+            "Cmd": [
+                "/bin/sh",
+                "-c",
+                "#(nop) ",
+                "CMD [\"/bin/bash\"]"
+            ],
+            ...
+        },
+        "DockerVersion": "18.09.7",
+        "Author": "",
+        ...
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:d42a4fdf4b2ae8662ff2ca1b695eae571c652a62973c1beb81a296a4f4263d92",
+                "sha256:90ac32a0d9ab11e7745283f3051e990054616d631812ac63e324c1a36d2677f5",
+                "sha256:782f5f011ddaf2a0bfd38cc2ccabd634095d6e35c8034302d788423f486bb177"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]
+```
+
+### 编写Dockerfile
+
+|命令|含义|案例|
+|--|--|---|
+| FROM      | 继承的镜像     | FROM node  |
+| COPY      | 拷贝          | COPY ./app ./app  |
+| WORKDIR   | 指定工作路径    |  WORKDIR /app |
+| RUN       | 编译打包阶段运行命令 |  RUN npm  install  |
+| EXPOSE    | 暴露端口       |  EXPOSE 3000  |
+| CMD       | 容器运行阶段运行命令       |  EXPOSE npm run start  |
+
+
+### dockerignore
+
+- 表示要排除，不要打包到`image`中的文件路径。
+```sh
+.git
+node_modules
+```
+
+### Dockerfile
+
+#### 安装node
+
+```sh
+# 下载nvm
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
+# 永久生效npm命令
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# source /root/.bashrc
+# 安装 node 最新稳定版
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# nvm install stable
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# node -v
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# npm install cnpm -g
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# cnpm install nrm -g
+```
+
+#### 安装express项目生成器
+
+```sh
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]#  cnpm i express-generator -g
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]#  express app
+```
+
+
+#### Dockerfile
+
+```yml
+FORM    node
+COPY    ./app /app
+WOEKDIR /app
+RUN     npm install
+EXPOSE  3000
+CMD  npm start
+```
+
+- `FROM` 表示该镜像继承的镜像 `:`表示标签。
+
+- `COPY`是当前项目下的`app`目录下面的文件都拷贝`image`里的`/app`目录中。
+
+- `WORKDIR`指定工作目录，类似于执行`cd`命令。
+
+- `RUN npm install` 在`/app`目录下安装依赖，安装后的依赖，也会打包到`image`中。在编译镜像时候执行的，可以指定多条。
+
+- `EXPOSE`暴露`3000`端口，允许外部连接这个端口。
+
+- `CMD  npm start` 在启动容器时执行，只能有一个。如果启动的时候传递`/bin/bash` ,那么`CMD`将不再执行。
+
+### 创建image
+
+```sh
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker build -t express-demo .
+```
+- `-t`用来指定`image`镜像的名字，后面还可以加冒号指定标签，如果不加默认指定`lastest`。
+
+- `.`表示`Dockerfile`文件的所在路径，`.`表示当前路径。
+
+### 使用心得镜像运行容器
+
+```sh
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker container run -d -p 3333:3000 -it express-demo 
+```
+### CMD
+`Dockerfile`
+```YML
+CMD npm  start
+```
+
+```sh
+docker build -t express-demo .
+```
+
+- `RUN`命令在`image`文件构建阶段执行，执行结果都会被打打包进入`image`文件。
+
+- `CMD`命令是在容器启动后自动执行。
+
+- 一个`Dockerfile`可以打包多个`RUN`命令，但是只能有一个`CMD`命令。
+
+- 指定了`CMD`命令以后，`docker container run`命令就不能再附加命令了,比如前面的`/bin/bash`,否则就会被覆盖掉。
+
+### 提交镜像
+
+1. [注册账号]()
+
+2. `docker tag SOURCE_IMAGE[: TAG] TARGET_IMAGE[: TAG]`
+
+```sh
+docker login
+docker image tag [imageName] [usrName]/[repository]:[tag]
+docker image build -t [username]/[repository]:[tag]
+
+docker tag express-demo quanduan/express-demo:v1
+docker push quanduan/express-demo:v1
+```
+
+## Compose
 
 * `compose` 通过一个配置文件来管理多个 `docker` 容器。
+
 * 在配置文件中，所有的容器通过 `services` 来定义，然后使用 `docker-compose` 脚本来启动、停止和重启应用和应用中的服务以及所有依赖的服务器。
+
 * 步骤：
 
    - 最后services，运行 `docker-compose up` , `Compose` 将启动并运行整个应用程序配置文件组成。
+
    - `services` 可以定义需要的服务，每个服务都有自己的名字，使用的镜像，挂载的数据卷所属的网络和依赖的其他服务。
+
    - `networks` 的应用的网络，在它下面可以自定义使用网络名称，类型。
+
    - `volumes` 是数据卷，可以在此定义数据卷，然后挂载到不同的服务上面使用。
+
+
 
 ### 安装 `compose`
 
 ### 编写 `docker-compose.yml`
 * 在 `docker-compose.yml` 中定义组成应用程序的服务，以便他们可以隔离的环境中一起运行。
+
 * 空格缩进代表层次。
+
 * 冒号空格后面有空格。
 
 ``` yml
