@@ -764,7 +764,7 @@ CMD  npm start
 
 - `.`表示`Dockerfile`文件的所在路径，`.`表示当前路径。
 
-### 使用心得镜像运行容器
+### 使用新的镜像运行容器
 
 ```sh
 [root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker container run -d -p 3333:3000 -it express-demo 
@@ -802,6 +802,145 @@ docker tag express-demo quanduan/express-demo:v1
 docker push quanduan/express-demo:v1
 ```
 
+## 数据盘
+
+- 删除容器的时候，容器层创建的文件也会被删除，如果有些数据你想永久保存，比如`web`服务器日志，数据库管理系统中的数据，可以为容器创建一个数据盘。
+
+![tapable](../images/docker-volume.png)
+
+### volume
+
+- `volumes Docker`管理宿主机文件系统的一部分(`/var/lib/docker/volumes`)。
+
+- 如果没有指定数据卷，则会自动创建。
+
+- 建议使用`--mount`，更通用。
+
+### 创建数据卷 
+```sh
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker volume --help
+
+Usage:  docker volume COMMAND
+
+Manage volumes
+
+Commands:
+  create      Create a volume
+  inspect     Display detailed information on one or more volumes
+  ls          List volumes
+  prune       Remove all unused local volumes
+  rm          Remove one or more volumes
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]#  docker volume create nginx-logger  #创建数据源， 创建完在哪里呢？
+nginx-logger
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker volume ls
+DRIVER              VOLUME NAME
+local               nginx-logger
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker volume inspect nginx-logger
+[
+    {
+        "CreatedAt": "2020-10-17T22:42:09+08:00",
+        "Driver": "local",
+        "Labels": {},
+        "Mountpoint": "/var/lib/docker/volumes/nginx-logger/_data", #  在宿主机这个位置。
+        "Name": "nginx-logger",
+        "Options": {},
+        "Scope": "local"
+    }
+]
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# cd /var/lib/docker/volumes/nginx-logger/_data
+[root@iZ2ze4re2plzzckpd3iu6pZ _data]# ls -al
+total 0
+drwxr-xr-x 2 root root  6 Oct 17 22:42 .
+drwxr-xr-x 3 root root 19 Oct 17 22:42 ..
+```
+```sh
+# 把 nginx-logger 数据卷挂载到/usr/share/nginx/html,挂载后容器内的文件会同步到数据卷中。
+# 第一种挂载方法
+docker run -d --name nginx1 --mount src=nginx-logger,dst=/usr/share/nginx/html nginx
+# 第二种挂载方法
+docker run -d --name nginx2 -v snginx-logger:/usr/share/nginx/html -p 3000:80 nginx
+```
+
+### 删除数据卷
+```sh
+docker container stop nginx1
+docker container rm nginx1
+docker volume rm nginx-logger
+```
+
+
+### 管理数据卷
+
+```sh
+docker volume ls # 列出所有的数据卷
+docker volume ls -f dangling=true #列出已经孤立的数据盘
+docker volume rm xxxx # 删除数据盘
+```
+
+### Bind mounts
+
+- 此方式与`Linux`系统的`mount`方式很类似，即是会覆盖容器内已经存在的目录或文件，但并不会改变容器内原有的文件，
+当`unmount`后容器内的文件就会被还原。
+
+- 创建容器的时候我们可以通过`-v`或`--volumn`给他指定一下数据盘。
+
+- `bind mounts`可以存储在宿主机系统的任意位置。
+
+- 如果源文件/目录 不存在，不会自动创建，会抛出一个错误。
+
+- 如果挂载目标在容器中非空目录，则该目录现有内容将被隐藏。
+
+#### 默认数据盘
+
+- `-v`参数两种挂载数据卷方式都以使用。
+
+```sh
+docker run -v /mnt:/mnt -it --name logs centos bash
+cd /mnt
+echo 1 > 1.txt
+exit
+``` 
+```sh
+docker volume inspect logs
+”Mounts“:[
+  {
+    "Source":"xxxx",
+    "Destination":"xxxx",
+  }
+]
+```
+
+- `Source` 的值就是我们给容器指定在数据盘在主机上的位置。
+
+- `Destination`的值是这个数据盘在容器上的位置。
+
+
+#### 指定数据盘
+```sh
+mkdir ~/data
+docker run -v ~/data:/mnt -it --name log2 centos bash
+cd /mnt
+echo 3 > 3.txt
+exit 
+cat ~/data/3.txt
+```
+
+- `~/data:/mnt` 把当前用户目录中的`data`映射到`/mnt`上。
+
+#### 指定数据盘容器
+
+```sh
+docker create -v /mnt:/mnt --name logger centos
+docker run --volumes-from logger --name logger3 -i -t centos bash
+cd /mnt
+touch logger3
+docker run --volumes-from logger --name logger4 -i -t centos bash
+cd /mnt
+touch logger4
+```
+
+## 网络
+
 ## Compose
 
 * `compose` 通过一个配置文件来管理多个 `docker` 容器。
@@ -817,6 +956,7 @@ docker push quanduan/express-demo:v1
    - `networks` 的应用的网络，在它下面可以自定义使用网络名称，类型。
 
    - `volumes` 是数据卷，可以在此定义数据卷，然后挂载到不同的服务上面使用。
+
 
 
 
