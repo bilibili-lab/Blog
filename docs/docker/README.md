@@ -1066,7 +1066,18 @@ docker container port port_nginx
 
 ### 指向主机的随机端口
 
+```sh
+# 一个80代表了指定了docker容器的端口，宿主机将会随机一个端口。
+docker run -d --name random_nginx --public 80 ngixn
+docker port random_nginx
+
+# 把容器内的所有端口号都给开放出，假如容器有两个端口，将暴露出两个端口。
+docker run  -d --name randomall_nginx --public-all nginx
+docker run  -d --name randomall_nginx --P nginx
+```
+
 ### 创建自定义网络
+
 
 ### 连接到指定网络
 
