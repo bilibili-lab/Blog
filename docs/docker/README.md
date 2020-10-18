@@ -617,25 +617,24 @@ hello-world         latest              bf756fb1ae65        9 months ago        
 
 ## commit制作个性化镜像
 
-- `docker container commit` 从容器创建一个新的镜像。
+* `docker container commit` 从容器创建一个新的镜像。
 
--  `docker container commit [options] CONTAINER [REPOSITORY [:TAG]]`
-
+* `docker container commit [options] CONTAINER [REPOSITORY [:TAG]]`
    - `-a` 提交的镜像作者。
 
-   - `-c` 使用`Dockerfile`来创建镜像
+   - `-c` 使用 `Dockerfile` 来创建镜像
 
    - `-m` 提交时的说明文字。
 
-   - `-p` 在`commit`时将，将容器暂停。
+   - `-p` 在 `commit` 时将，将容器暂停。
 
-- 停止容器后不会自动删除容器， 除非在启动容器的时候指定了`--rm`标志。
+* 停止容器后不会自动删除容器， 除非在启动容器的时候指定了 `--rm` 标志。
 
-- 使用`docker ps -a` 命令查看`Docker`主机上包含停止的容器在内的所有容器。
+* 使用 `docker ps -a` 命令查看 `Docker` 主机上包含停止的容器在内的所有容器。
 
--  停止状态的容器的可写层仍然占用磁盘。要清理可以使用`docker container prune`命令。
+*  停止状态的容器的可写层仍然占用磁盘。要清理可以使用 `docker container prune` 命令。
 
-```sh
+``` sh
 [root@iZ2ze4re2plzzckpd3iu6pZ ~]# runoob@runoob:~$ docker commit -a "runoob.com" -m "my apache" a404c6c174a2  mymysql:v1 
 sha256:37af1236adef1544e8886be23010b66577647a40bc02c0885a6600b33ee28057
 [root@iZ2ze4re2plzzckpd3iu6pZ ~]# runoob@runoob:~$ docker images mymysql:v1
@@ -645,13 +644,13 @@ mymysql             v1                  37af1236adef        15 seconds ago      
 
 ## 制作Dockerfile
 
-- `Docker` 的镜像是一层一层的文件组成作用。
+* `Docker` 的镜像是一层一层的文件组成作用。
 
-- `docker inspect` 命令可以查看镜像或者容器。
+* `docker inspect` 命令可以查看镜像或者容器。
 
-- `Layers`就是镜像的层文件，只能读不能修改。基于镜像创建的容器会共享这些文件层。
+* `Layers` 就是镜像的层文件，只能读不能修改。基于镜像创建的容器会共享这些文件层。
 
-```sh
+``` sh
 ``` sh
 [root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker image inspect ubuntu
 [
@@ -699,11 +698,11 @@ mymysql             v1                  37af1236adef        15 seconds ago      
 | EXPOSE    | 暴露端口       |  EXPOSE 3000  |
 | CMD       | 容器运行阶段运行命令       |  EXPOSE npm run start  |
 
-
 ### dockerignore
 
-- 表示要排除，不要打包到`image`中的文件路径。
-```sh
+* 表示要排除，不要打包到 `image` 中的文件路径。
+
+``` sh
 .git
 node_modules
 ```
@@ -712,7 +711,7 @@ node_modules
 
 #### 安装node
 
-```sh
+``` sh
 # 下载nvm
 [root@iZ2ze4re2plzzckpd3iu6pZ ~]# wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
 # 永久生效npm命令
@@ -726,15 +725,14 @@ node_modules
 
 #### 安装express项目生成器
 
-```sh
+``` sh
 [root@iZ2ze4re2plzzckpd3iu6pZ ~]#  cnpm i express-generator -g
 [root@iZ2ze4re2plzzckpd3iu6pZ ~]#  express app
 ```
 
-
 #### Dockerfile
 
-```yml
+``` yml
 FORM    node
 COPY    ./app /app
 WOEKDIR /app
@@ -743,49 +741,53 @@ EXPOSE  3000
 CMD  npm start
 ```
 
-- `FROM` 表示该镜像继承的镜像 `:`表示标签。
+* `FROM` 表示该镜像继承的镜像 `:` 表示标签。
 
-- `COPY`是当前项目下的`app`目录下面的文件都拷贝`image`里的`/app`目录中。
+* `COPY` 是当前项目下的 `app` 目录下面的文件都拷贝 `image` 里的 `/app` 目录中。
 
-- `WORKDIR`指定工作目录，类似于执行`cd`命令。
+* `WORKDIR` 指定工作目录，类似于执行 `cd` 命令。
 
-- `RUN npm install` 在`/app`目录下安装依赖，安装后的依赖，也会打包到`image`中。在编译镜像时候执行的，可以指定多条。
+* `RUN npm install` 在 `/app` 目录下安装依赖，安装后的依赖，也会打包到 `image` 中。在编译镜像时候执行的，可以指定多条。
 
-- `EXPOSE`暴露`3000`端口，允许外部连接这个端口。
+* `EXPOSE` 暴露 `3000` 端口，允许外部连接这个端口。
 
-- `CMD  npm start` 在启动容器时执行，只能有一个。如果启动的时候传递`/bin/bash` ,那么`CMD`将不再执行。
+* `CMD  npm start` 在启动容器时执行，只能有一个。如果启动的时候传递 `/bin/bash` , 那么 `CMD` 将不再执行。
 
 ### 创建image
 
-```sh
+``` sh
 [root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker build -t express-demo .
 ```
-- `-t`用来指定`image`镜像的名字，后面还可以加冒号指定标签，如果不加默认指定`lastest`。
 
-- `.`表示`Dockerfile`文件的所在路径，`.`表示当前路径。
+* `-t` 用来指定 `image` 镜像的名字，后面还可以加冒号指定标签，如果不加默认指定 `lastest` 。
+
+* `.` 表示 `Dockerfile` 文件的所在路径， `.` 表示当前路径。
 
 ### 使用新的镜像运行容器
 
-```sh
+``` sh
 [root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker container run -d -p 3333:3000 -it express-demo 
 ```
+
 ### CMD
-`Dockerfile`
-```YML
+
+ `Dockerfile`
+
+``` YML
 CMD npm  start
 ```
 
-```sh
+``` sh
 docker build -t express-demo .
 ```
 
-- `RUN`命令在`image`文件构建阶段执行，执行结果都会被打打包进入`image`文件。
+* `RUN` 命令在 `image` 文件构建阶段执行，执行结果都会被打打包进入 `image` 文件。
 
-- `CMD`命令是在容器启动后自动执行。
+* `CMD` 命令是在容器启动后自动执行。
 
-- 一个`Dockerfile`可以打包多个`RUN`命令，但是只能有一个`CMD`命令。
+* 一个 `Dockerfile` 可以打包多个 `RUN` 命令，但是只能有一个 `CMD` 命令。
 
-- 指定了`CMD`命令以后，`docker container run`命令就不能再附加命令了,比如前面的`/bin/bash`,否则就会被覆盖掉。
+* 指定了 `CMD` 命令以后， `docker container run` 命令就不能再附加命令了, 比如前面的 `/bin/bash` , 否则就会被覆盖掉。
 
 ### 提交镜像
 
@@ -793,7 +795,7 @@ docker build -t express-demo .
 
 2. `docker tag SOURCE_IMAGE[: TAG] TARGET_IMAGE[: TAG]`
 
-```sh
+``` sh
 docker login
 docker image tag [imageName] [usrName]/[repository]:[tag]
 docker image build -t [username]/[repository]:[tag]
@@ -804,20 +806,21 @@ docker push quanduan/express-demo:v1
 
 ## 数据盘
 
-- 删除容器的时候，容器层创建的文件也会被删除，如果有些数据你想永久保存，比如`web`服务器日志，数据库管理系统中的数据，可以为容器创建一个数据盘。
+* 删除容器的时候，容器层创建的文件也会被删除，如果有些数据你想永久保存，比如 `web` 服务器日志，数据库管理系统中的数据，可以为容器创建一个数据盘。
 
 ![tapable](../images/docker-volume.png)
 
 ### volume
 
-- `volumes Docker`管理宿主机文件系统的一部分(`/var/lib/docker/volumes`)。
+* `volumes Docker` 管理宿主机文件系统的一部分( `/var/lib/docker/volumes` )。
 
-- 如果没有指定数据卷，则会自动创建。
+* 如果没有指定数据卷，则会自动创建。
 
-- 建议使用`--mount`，更通用。
+* 建议使用 `--mount` ，更通用。
 
 ### 创建数据卷 
-```sh
+
+``` sh
 [root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker volume --help
 
 Usage:  docker volume COMMAND
@@ -853,7 +856,8 @@ total 0
 drwxr-xr-x 2 root root  6 Oct 17 22:42 .
 drwxr-xr-x 3 root root 19 Oct 17 22:42 ..
 ```
-```sh
+
+``` sh
 # 把 nginx-logger 数据卷挂载到/usr/share/nginx/html,挂载后容器内的文件会同步到数据卷中。
 # 第一种挂载方法
 docker run -d --name nginx1 --mount src=nginx-logger,dst=/usr/share/nginx/html nginx
@@ -862,16 +866,16 @@ docker run -d --name nginx2 -v snginx-logger:/usr/share/nginx/html -p 3000:80 ng
 ```
 
 ### 删除数据卷
-```sh
+
+``` sh
 docker container stop nginx1
 docker container rm nginx1
 docker volume rm nginx-logger
 ```
 
-
 ### 管理数据卷
 
-```sh
+``` sh
 docker volume ls # 列出所有的数据卷
 docker volume ls -f dangling=true #列出已经孤立的数据盘
 docker volume rm xxxx # 删除数据盘
@@ -879,28 +883,30 @@ docker volume rm xxxx # 删除数据盘
 
 ### Bind mounts
 
-- 此方式与`Linux`系统的`mount`方式很类似，即是会覆盖容器内已经存在的目录或文件，但并不会改变容器内原有的文件，
-当`unmount`后容器内的文件就会被还原。
+* 此方式与 `Linux` 系统的 `mount` 方式很类似，即是会覆盖容器内已经存在的目录或文件，但并不会改变容器内原有的文件，
 
-- 创建容器的时候我们可以通过`-v`或`--volumn`给他指定一下数据盘。
+当 `unmount` 后容器内的文件就会被还原。
 
-- `bind mounts`可以存储在宿主机系统的任意位置。
+* 创建容器的时候我们可以通过 `-v` 或 `--volumn` 给他指定一下数据盘。
 
-- 如果源文件/目录 不存在，不会自动创建，会抛出一个错误。
+* `bind mounts` 可以存储在宿主机系统的任意位置。
 
-- 如果挂载目标在容器中非空目录，则该目录现有内容将被隐藏。
+* 如果源文件/目录 不存在，不会自动创建，会抛出一个错误。
+
+* 如果挂载目标在容器中非空目录，则该目录现有内容将被隐藏。
 
 #### 默认数据盘
 
-- `-v`参数两种挂载数据卷方式都以使用。
+* `-v` 参数两种挂载数据卷方式都以使用。
 
-```sh
+``` sh
 docker run -v /mnt:/mnt -it --name logs centos bash
 cd /mnt
 echo 1 > 1.txt
 exit
-``` 
-```sh
+```
+
+``` sh
 docker volume inspect logs
 ”Mounts“:[
   {
@@ -910,13 +916,13 @@ docker volume inspect logs
 ]
 ```
 
-- `Source` 的值就是我们给容器指定在数据盘在主机上的位置。
+* `Source` 的值就是我们给容器指定在数据盘在主机上的位置。
 
-- `Destination`的值是这个数据盘在容器上的位置。
-
+* `Destination` 的值是这个数据盘在容器上的位置。
 
 #### 指定数据盘
-```sh
+
+``` sh
 mkdir ~/data
 docker run -v ~/data:/mnt -it --name log2 centos bash
 cd /mnt
@@ -925,11 +931,11 @@ exit
 cat ~/data/3.txt
 ```
 
-- `~/data:/mnt` 把当前用户目录中的`data`映射到`/mnt`上。
+* `~/data:/mnt` 把当前用户目录中的 `data` 映射到 `/mnt` 上。
 
 #### 指定数据盘容器
 
-```sh
+``` sh
 docker create -v /mnt:/mnt --name logger centos
 docker run --volumes-from logger --name logger3 -i -t centos bash
 cd /mnt
@@ -940,6 +946,131 @@ touch logger4
 ```
 
 ## 网络
+
+* 安装 `Docker` 时，它会自动创建三个网络， `bridge` (创建容器默认连接到此网络)、 `none` 、 `host` 。
+
+   - `None` 该模式关闭了容器的网络功能，外界完全隔离。
+
+   - `host` 容器将不会虚拟出自己的网卡，配置自己的 `IP` 等，而是使用宿主机的 `IP` 和端口。
+
+   - `bridge` 桥接网络， 此模式会为每一个容器分配 `IP` 。
+
+* 可以使用该 `--network` 标志来指定容器应连接到哪些网络。
+
+``` sh
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+8f8c1a11be31        bridge              bridge              local
+5a0e2586cf43        host                host                local
+6b1d0450471f        none                null                local
+```
+
+### bridge
+
+* `bridge` 网络代表所有 `Docker` 安装中存在的网络。
+
+* 除非你使用该 `docker run  --network=<NETWORK>` 选项指定，否则 `Docker` 守护进程默认将容器连接到此网络。
+
+* `bridge` 模式使用 `--new=bridge` ，默认设置。
+
+``` sh
+docker network ls
+docker inspect bridge
+docker run  -d --name nginx1 nginx
+docker run  -d --name nginx2 --link nginx1 nginx
+docker exec -it nginx2 bash
+apt update
+apt install -y inetutils   #ping
+apt install -y dnsutils    #nslookup
+apt install -y net- tools  #ifconfig
+apt install -y iproute2    #ip
+apt install -y curl        #curl
+cat /ect/hosts
+ping nginx1
+```
+
+``` sh
+[root@iZ2ze4re2plzzckpd3iu6pZ ~]# docker inspect bridge
+[
+    {
+        "Name": "bridge",
+        "Id": "8f8c1a11be31eb3a225a4d8d8c2318a816b6620c1b4ef3541f563390a4007881",
+        "Created": "2020-10-12T22:48:51.019627791+08:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.17.0.0/16"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {
+            "com.docker.network.bridge.default_bridge": "true",
+            "com.docker.network.bridge.enable_icc": "true",
+            "com.docker.network.bridge.enable_ip_masquerade": "true",
+            "com.docker.network.bridge.host_binding_ipv4": "0.0.0.0",
+            "com.docker.network.bridge.name": "docker0",
+            "com.docker.network.driver.mtu": "1500"
+        },
+        "Labels": {}
+    }
+]
+```
+
+### none
+
+* `none` 模式使用 `--net=none`
+
+``` sh
+docker run -d --name nginx_none --net none nginx
+docker inpsect none
+docker exec -it nginx_none bash
+ip addr
+```
+
+### host
+
+* `host` 模式使用 `--net=host`
+
+``` sh
+docker run -d --name nginx_host --net host nginx
+docker inspect host
+docker exec -it nginx_host bash
+ip addr
+```
+
+### 端口映射
+
+``` sh
+# 查看镜像里暴露出来的端口号
+docker imgae inspect nginx
+”ExposePorts“:{"80/tcp":{}}
+
+# 让宿主机的8080端口映射到docker容器的80端口
+docker run -d --name port nginx -p 8080:80 nginx
+# 查看主机绑定的端口
+docker container port port_nginx
+```
+
+### 指向主机的随机端口
+
+### 创建自定义网络
+
+### 连接到指定网络
+
+### 移除网络
 
 ## Compose
 
@@ -956,9 +1087,6 @@ touch logger4
    - `networks` 的应用的网络，在它下面可以自定义使用网络名称，类型。
 
    - `volumes` 是数据卷，可以在此定义数据卷，然后挂载到不同的服务上面使用。
-
-
-
 
 ### 安装 `compose`
 
