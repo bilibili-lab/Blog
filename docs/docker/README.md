@@ -1078,10 +1078,33 @@ docker run  -d --name randomall_nginx --P nginx
 
 ### 创建自定义网络
 
+- 可以创建多个网络，每个网络`IP`范围不相同。
+
+- `docker`的自定义网络里面有一个`DNS`服务，可以通过容器名称访问主机。
+
+```sh
+# 创建自定义网络。
+docker network create --driver bridge myweb
+# 查看自定义网络中主机
+docker newwork inspect myweb
+#创建容器的时候指定网络
+docker run -d --name mynginx1 --net myweb nginx
+docker run -d --name nginxx2  --net myweb nginx
+docker exec -it mynginx2 bash
+ping mynginx1
+```
 
 ### 连接到指定网络
+```sh
+docker run -d --name mynginx3 nginx
+docker network connect myweb mynginx3
+docker network disconnect myweb mynginx3
+```
 
 ### 移除网络
+```sh
+docker network rm myweb
+```
 
 ## Compose
 
