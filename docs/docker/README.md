@@ -1066,7 +1066,7 @@ docker container port port_nginx
 
 ### 指向主机的随机端口
 
-```sh
+``` sh
 # 一个80代表了指定了docker容器的端口，宿主机将会随机一个端口。
 docker run -d --name random_nginx --public 80 ngixn
 docker port random_nginx
@@ -1078,11 +1078,11 @@ docker run  -d --name randomall_nginx --P nginx
 
 ### 创建自定义网络
 
-- 可以创建多个网络，每个网络`IP`范围不相同。
+* 可以创建多个网络，每个网络 `IP` 范围不相同。
 
-- `docker`的自定义网络里面有一个`DNS`服务，可以通过容器名称访问主机。
+* `docker` 的自定义网络里面有一个 `DNS` 服务，可以通过容器名称访问主机。
 
-```sh
+``` sh
 # 创建自定义网络。
 docker network create --driver bridge myweb
 # 查看自定义网络中主机
@@ -1095,14 +1095,16 @@ ping mynginx1
 ```
 
 ### 连接到指定网络
-```sh
+
+``` sh
 docker run -d --name mynginx3 nginx
 docker network connect myweb mynginx3
 docker network disconnect myweb mynginx3
 ```
 
 ### 移除网络
-```sh
+
+``` sh
 docker network rm myweb
 ```
 
@@ -1124,7 +1126,15 @@ docker network rm myweb
 
 ### 安装 `compose`
 
+``` sh
+yum -y install epel-release
+yum -y install python-pip
+yum clean  all
+pip install docker-compose
+```
+
 ### 编写 `docker-compose.yml`
+
 * 在 `docker-compose.yml` 中定义组成应用程序的服务，以便他们可以隔离的环境中一起运行。
 
 * 空格缩进代表层次。
@@ -1143,3 +1153,50 @@ services:
       port:
          - "8081:80"
 ```
+
+### 启动服务
+
+* `docker` 会创建默认的网络。
+
+|命令|服务|
+|---|---|
+|docker-compose up          | 启动所有的服务|
+|docker-compose up -d       | 后台启动所有的服务|
+|docker-compose ps          | 打印所有的容器|
+|docker-compose stop        | 停止所有服务|
+|docker-compose logs -f     | 持续跟踪日志 |
+|docker-compose exec nginx1 bash  | 进入nginx1服务系统 |
+|docker-compose  rm nginx1  | 删除服务容器 |
+|docker network ls          | 查看网络不会删除 |
+|docker-compose down        | 删除所有的网络和容器 |
+
+### 网络互ping
+
+``` sh
+docker-compose up -d
+docker-compose exec nginx1 bash
+apt update&& apt install -y inetutils-ping
+ping nginx2
+```
+
+### 配置数据卷
+
+* `network` 指定自定义网络。
+
+* `volumes` 指定数据卷。
+
+* 数据卷在宿主机的位置 `/var/lib/docker/volumes/nginx-compose_data/_data`
+<!-- ``` yml
+version: '2'
+services:
+
+    nginx1:
+      image: nginx
+      port:
+         - "8080:80"
+    nginx1:
+      image: nginx
+      port:
+         - "8081:80"
+
+``` -->

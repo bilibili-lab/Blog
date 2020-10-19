@@ -18,6 +18,10 @@ module.exports = {
 
     nav: [
       {
+        text: 'CSS',
+        link: '/css/'
+      },
+      {
         text: 'Webpack',
         link: '/webpack/'
       },
@@ -34,7 +38,7 @@ module.exports = {
         link: '/docker/'
       },
       {
-        text: '其他',
+        text: '更多',
         link: '/others/'
       },
       // {
@@ -115,7 +119,6 @@ module.exports = {
         'nginx-install',
         'nginx-conf',
         'nginx-modues',
-        // 'nginx-log',
         'nginx-others',
       ],
       "/docker/": [
@@ -140,8 +143,7 @@ module.exports = {
             'linux-vb',
             'linux-init',
           ]
-        },
-        
+        },      
         {
           title: "目录和命令",
           collapsable: false,
@@ -155,7 +157,6 @@ module.exports = {
           ]
         },
         'linux-group',
-        // 'linux-net',
         {
           title: "权限管理",
           collapsable: false,
@@ -209,7 +210,6 @@ module.exports = {
             'linux-yum',
             'linux-origin-package',
             'linux-script-package',
-            // 'linux-origin-package-mng',
           ]
         },
         {
@@ -230,14 +230,16 @@ module.exports = {
           ]
         },
       ],
+      '/css/': [
+        '',
+      ],
       '/webpack/': [
         {
           title: "进阶",
           collapsable: false,
           children: [
-            '',
-            'tapable',
-            'plugin'
+           'tapable',
+           'plugin'
           ]
         },
         // {
