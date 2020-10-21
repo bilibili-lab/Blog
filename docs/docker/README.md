@@ -1186,17 +1186,5 @@ ping nginx2
 * `volumes` 指定数据卷。
 
 * 数据卷在宿主机的位置 `/var/lib/docker/volumes/nginx-compose_data/_data`
-<!-- ``` yml
-version: '2'
-services:
 
-    nginx1:
-      image: nginx
-      port:
-         - "8080:80"
-    nginx1:
-      image: nginx
-      port:
-         - "8081:80"
 
-``` -->

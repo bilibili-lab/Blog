@@ -15,7 +15,6 @@ module.exports = {
 
   themeConfig: {
     smoothScroll: true,
-
     nav: [
       {
         text: 'CSS',
@@ -38,82 +37,26 @@ module.exports = {
         link: '/docker/'
       },
       {
-        text: '更多',
-        link: '/others/'
+        text: '数据库',
+        items: [
+          { text: 'MySql', link: '/mysql/' },
+          { text: 'MongoDB', link: '/mongodb/' },
+        ]
       },
       // {
-      //   text: '了解更多',
-      //   ariaLabel: '了解更多',
-      //   items: [
-      //     {
-      //       text: 'API',
-      //       items: [
-      //         {
-      //           text: 'CLI',
-      //           link: '/zh/api/cli.html'
-      //         },
-      //         {
-      //           text: 'Node',
-      //           link: '/zh/api/node.html'
-      //         }
-      //       ]
-      //     },
-      //     {
-      //       text: '开发指南',
-      //       items: [
-      //         {
-      //           text: '本地开发',
-      //           link: '/zh/miscellaneous/local-development.html'
-      //         },
-      //         {
-      //           text: '设计理念',
-      //           link: '/zh/miscellaneous/design-concepts.html'
-      //         },
-      //         {
-      //           text: 'FAQ',
-      //           link: '/zh/faq/'
-      //         },
-      //         {
-      //           text: '术语',
-      //           link: '/zh/miscellaneous/glossary.html'
-      //         }
-      //       ]
-      //     },
-      //     {
-      //       text: '其他',
-      //       items: [
-      //         {
-      //           text: '从 0.x 迁移',
-      //           link: '/zh/miscellaneous/migration-guide.html'
-      //         },
-      //         {
-      //           text: 'Changelog',
-      //           link: 'https://github.com/vuejs/vuepress/blob/master/CHANGELOG.md'
-      //         }
-      //       ]
-      //     }
-      //   ]
-      // },
-      // {
-      //   text: '0.x',
-      //   link: 'https://v0.vuepress.vuejs.org/'
+      //   text: '更多',
+      //   link: '/others/'
       // }
     ],
     // sidebar: 'auto'
 
     sidebar: {
-      // "/nginx/": [
-      //   {
-      //     title: "nginx",
-      //     collapsable: false,
-      //     children: [
-      //       '',
-      //       'nginx-install',
-      //       'nginx-conf',
-      //       'nginx-log',
-      //     ]
-      //   },
-      // ],
+
+      '/css/': [        
+        '',
+        "css-value"
+      ],
+    
       "/nginx/": [
         "",
         'nginx-install',
@@ -123,14 +66,6 @@ module.exports = {
       ],
       "/docker/": [
         ""
-        // {
-        //   title: "docker",
-        //   collapsable: false,
-        //   sidebarDepth: 2,
-        //   children: [
-        //     ''
-        //   ]
-        // },
       ],
       "/linux/": [
         {
@@ -143,7 +78,7 @@ module.exports = {
             'linux-vb',
             'linux-init',
           ]
-        },      
+        },
         {
           title: "目录和命令",
           collapsable: false,
@@ -220,7 +155,7 @@ module.exports = {
             'linux-timer-task',
           ]
         },
-        
+
         {
           title: "VI编辑器",
           collapsable: false,
@@ -230,28 +165,21 @@ module.exports = {
           ]
         },
       ],
-      '/css/': [
+     
+      'mysql':[
         '',
+        'mysql-introduce'
+        
       ],
       '/webpack/': [
         {
           title: "进阶",
           collapsable: false,
           children: [
-           'tapable',
-           'plugin'
+            'tapable',
+            'plugin'
           ]
         },
-        // {
-        //   title: "2",
-        //   collapsable: false,
-        //   children: [
-        //     'frontmatter',
-        //     'permalinks',
-        //     'markdown-slot',
-        //     'global-computed'
-        //   ]
-        // }
       ]
     }
   }
