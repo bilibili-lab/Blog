@@ -173,11 +173,19 @@ module.exports = {
       ],
       '/webpack/': [
         {
-          title: "进阶",
+          title: "Plugin",
           collapsable: false,
           children: [
-            'tapable',
+            '',
             'plugin'
+          ]
+        },
+        {
+          title: "Loader",
+          collapsable: false,
+          children: [
+            'loader',
+            'loader-config'
           ]
         },
       ]
