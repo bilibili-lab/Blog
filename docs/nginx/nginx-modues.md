@@ -1,5 +1,5 @@
 ---
-sidebarDepth: 5
+sidebarDepth: 2
 ---
 
 # 核心模块

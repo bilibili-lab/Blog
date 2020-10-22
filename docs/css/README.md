@@ -1,6 +1,5 @@
 ---
 sidebarDepth: 2
-sidebar: auto
 ---
 
 # 层叠与继承
@@ -111,7 +110,7 @@ color: red !important;
 
 #### 选择器优先级
 
-每一种`css`选择器都有一种权重。
+每一种`css`选择器都有一种
 
 ![nginx](../images/css-youxianji.png)
 

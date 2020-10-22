@@ -5,7 +5,7 @@ module.exports = {
     lineNumbers: true
   },
   themeConfig: {
-    lastUpdated: '上次更新', // string | boolean
+    lastUpdated: true
   },
   plugins: [
     // require('@vuepress/back-to-top'),
@@ -36,13 +36,13 @@ module.exports = {
         text: 'Docker',
         link: '/docker/'
       },
-      {
-        text: '数据库',
-        items: [
-          { text: 'MySql', link: '/mysql/' },
-          { text: 'MongoDB', link: '/mongodb/' },
-        ]
-      },
+      // {
+      //   text: '数据库',
+      //   items: [
+      //     { text: 'MySql', link: '/mysql/' },
+      //     { text: 'MongoDB', link: '/mongodb/' },
+      //   ]
+      // },
       // {
       //   text: '更多',
       //   link: '/others/'
