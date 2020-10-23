@@ -185,7 +185,8 @@ module.exports = {
           collapsable: false,
           children: [
             'loader',
-            'loader-config'
+            'loader-config',
+            'loader-use',
           ]
         },
       ]

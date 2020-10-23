@@ -185,3 +185,9 @@ position : initial;
 - height: auto
 
 - box-sizing: content-box;
+
+## 参考
+
+- [深入解析CSS(图灵出品)](https://item.jd.com/12642199.html)
+
+- [精通CSS 高级Web标准解决方案 第3版(图灵出品)](https://item.jd.com/12550434.html)
