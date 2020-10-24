@@ -43,7 +43,8 @@ module.exports = {
     sidebar: {
       '/sql/': [
         '',
-        'sql-intr'
+        'sql-intr',
+        'sql'
       ],
       '/css/': [
         '',
