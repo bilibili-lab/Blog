@@ -72,12 +72,86 @@
 
 ### 缓存结果
 
+[this.cacheable](https://www.webpackjs.com/api/loaders/#this-cacheable), `webpack` 充分利用缓存来提高编译效率。
+
 ``` js
 this.cacheable(true);
 ```
 
 ### 异步
 
+[this.async](https://www.webpackjs.com/api/loaders/#this-async)
+
+``` sh
+module.exprots = {
+    let callback = this.async()
+    doSomeAsyncOperation(content,(err, result)=> {
+        callback(null,result)
+    })
+}
+```
+
 ### raw loader
 
-### 获取 loader 的 options
+默认的情况源文件是以 `UTF-8` 字符串的形式传入给 `laoder` , 设置 `module.exports.raw = true` , 可以使 `buffer` 的形式处理。
+
+``` js
+module.exports.raw = true;
+```
+
+### 获取 Loader 的 options
+
+``` sh
+const laoderUtils = require('loader-utils')
+
+module.exports = (source) => {
+    const options = laoderUtils.getOptions(this)
+    return source
+}
+```
+
+###  返回其他结果
+
+[this.callback](https://www.webpackjs.com/api/loaders/#this-callback) `laoder` 有些场景下还需要返回除了内容之外的东西。
+
+``` sh
+this.callback(
+  err: Error | null,
+  content: string | Buffer,
+  sourceMap?: SourceMap,
+  meta?: any
+);
+```
+
+1. 第一个参数必须是 Error 或者 null
+2. 第二个参数是一个 string 或者 Buffer。
+3. 可选的：第三个参数必须是一个可以被这个模块解析的 source map。
+4. 可选的：第四个选项，会被 webpack 忽略，可以是任何东西（例如一些元数据）。例如 `AST`
+
+``` js
+module.exports = (source) => {
+    let callback = this.async()
+    this.callback(null, source, sourceMaps)
+    return;
+}
+```
+
+### 其他 Loader API
+
+[完整API](https://www.webpackjs.com/api/loaders/)
+
+|方法名|含义|
+|---|----|
+|this.context        |  当前处理文件的所在目录，假如当前 loader 处理的文件是 /src/main.js, this.context 就等于 /src  |
+|this.resource       |  当前处理文件的完整请求路径，包括 querystring， 例如 /src/main.js?name=1 |
+|this.resourcePath   |  当前处理文件的路径， 例如 /src/main.js |
+|this.resourceQuery  |  当前处理文件的 querystring |
+|this.target         |  等于 webpack 中配置的 Target |
+|this.loadModule     |  但 `loader` 在处理一个文件时，如果依赖其他文件的处理结果才能才能得到当前的文件的结果时，就可以通过 this.loadModule 去获取 request 对应文件的处理结果|
+|this.resolve       | 像 require 语句一样获得指定的文件的完整路径|
+|this.addDependency      | 给当前处理文件添加其依赖的文件，以便在其它依赖的文件发生变化时，会重新调用 laoder 处理文件|
+|this.addContextDependency| 和 addDependency 类似，但 addContextDependency 是把整个目录加入到当前正在处理的依赖中。|
+|this.clearDependencies| 清除当前正在处理文件的所有依赖|
+|this.emitFile | 输出一个文件 |
+|loader-utils.stringifyRequest | 把一个请求字符串转成一个字符串，以便能在 request 或者 import 中使用以避免绝对路劲，如果你在一个 loader 中生成代码的话请使用这个，而非使用 JSOstringify()|
+|loader-utils.interpolateName | 使用多个占位符或一个正则表达式转换为一个文件的模块，这个模块和正则表达式被设置为查询参数，在当前 laoder 的上下文被称为 name 或者 regExp | 
