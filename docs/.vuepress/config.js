@@ -8,9 +8,7 @@ module.exports = {
     lastUpdated: true
   },
   plugins: [
-    // require('@vuepress/back-to-top'),
-    // require('@vuepress/last-updated'),
-    // require('@vuepress/blog')
+
   ],
 
   themeConfig: {
@@ -36,27 +34,22 @@ module.exports = {
         text: 'Docker',
         link: '/docker/'
       },
-      // {
-      //   text: '数据库',
-      //   items: [
-      //     { text: 'MySql', link: '/mysql/' },
-      //     { text: 'MongoDB', link: '/mongodb/' },
-      //   ]
-      // },
-      // {
-      //   text: '更多',
-      //   link: '/others/'
-      // }
+      {
+        text: 'MySql',
+        link: '/sql/'
+      },
+
     ],
-    // sidebar: 'auto'
-
     sidebar: {
-
-      '/css/': [        
+      '/sql/': [
+        '',
+        'sql-intr'
+      ],
+      '/css/': [
         '',
         "css-value"
       ],
-    
+
       "/nginx/": [
         "",
         'nginx-install',
@@ -155,7 +148,6 @@ module.exports = {
             'linux-timer-task',
           ]
         },
-
         {
           title: "VI编辑器",
           collapsable: false,
@@ -165,12 +157,7 @@ module.exports = {
           ]
         },
       ],
-     
-      'mysql':[
-        '',
-        'mysql-introduce'
-        
-      ],
+
       '/webpack/': [
         {
           title: "Plugin",
