@@ -44,7 +44,8 @@ module.exports = {
       '/sql/': [
         '',
         'sql-intr',
-        'sql'
+        'sql',
+        'func'
       ],
       '/css/': [
         '',

@@ -1,11 +1,4 @@
 SELECT
-    id,
-    name,
-    idcard,
-    age,
-    city AS home
-FROM
-    student
+    * FORM student
 WHERE
-    city IS NULL
-    OR city = ''
+    CHAR_LENGTH(name) > 3;

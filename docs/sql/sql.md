@@ -186,7 +186,7 @@ FROM   <表名>
 [ORDER BY <排序的列名> [ASC或DESC]]
 ```
 
-### 排序
+### ORDER BY
 
 - 使用`ORDER BY`进行排序。
 
@@ -294,4 +294,24 @@ select * from Customer limit 5,10;
 select * from Customer limit 6,10;
 # 检索从第7行开始向前加10条记录，显示id为7,8...16
 ```
-<!-- ### DISTINCT -->
+### DISTINCT
+
+在表中，可能会包含重复值。这并不成问题，不过，有时您也许希望仅仅列出不同（distinct）的值。
+
+```sql
+SELECT DISTINCT 列名称 FROM 表名称
+```
+### +-
+
+在`MYSQL`中加号只能作用于数字。
+
+```sql
+SELECT 1+1;
+SELECT 1+'1';
+SELECT 1+'qianduan';
+SELECT 1+'null';
+SELECT
+    CONCAT(last_name, first_name)
+FROM
+    user;
+```
