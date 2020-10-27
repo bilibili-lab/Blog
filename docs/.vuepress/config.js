@@ -166,7 +166,9 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'plugin'
+            'plugin',
+            'loader-config',
+            
           ]
         },
         {
@@ -176,6 +178,7 @@ module.exports = {
             'loader',
             'loader-config',
             'loader-use',
+            'loader-train'
           ]
         },
       ]

@@ -10,6 +10,7 @@
 
 ## 匹配单个loader
 
+
 匹配单个 loader，你可以简单通过在 rules 对象设置 path.resolve 指向这个本地文件。
 
 ``` js
