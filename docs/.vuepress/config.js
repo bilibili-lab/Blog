@@ -166,9 +166,7 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'plugin',
-            'loader-config',
-            
+            'plugin',  
           ]
         },
         {
