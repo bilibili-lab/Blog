@@ -115,3 +115,133 @@ SELECT SUBSTRING('computer',-5,3);
 ### REPLACE
 
 替换函数 `REPLACE(s，s1，s2)` 使用字符串 `s2` 替换字符串 `s` 中所有的字符串 `s1` 。
+
+## 数学函数
+
+|函数名称|描述|
+|--|---|
+|CEIL |向上取整|
+|FLOOR |向下取整|
+|DIV |整除数|
+|DIV| 整除数|
+|MOD| 取余|
+|POWER| 幂运算|
+|ROUND| 四舍五入|
+|TRUNCATE| 数字截取|
+
+### ROUND
+
+四舍五入
+
+``` sql
+SELECT ROUND(2.5);
+```
+
+### TRUNCATE
+
+* `TRUNCATE(X,D)` 是 `MySQL` 自带的一个系统函数。
+
+* `X` 是数值， `D` 是保留小数的位数。
+
+``` sql
+SELECT TRUNCATE(123.4567, 3);   # 123.456
+SELECT TRUNCATE(123.4567, 2);   # 123.45
+SELECT TRUNCATE(123.4567, 1);   # 123.4
+SELECT TRUNCATE(123.4567, 0);   # 123
+SELECT TRUNCATE(123.4567, -1);  # 120
+SELECT TRUNCATE(123.4567, -2);  # 100
+SELECT TRUNCATE(123.4567, -3);  # 0
+```
+
+### CEIL
+
+向上取整。
+
+``` sql
+SELECT CEIL(2.6);
+```
+
+### FLOOR
+
+向下取整。
+
+``` sql
+SELECT CEIL(2.6);
+```
+
+### FLOOR
+
+取余函数。
+
+``` sql
+SELECT MOD(10，3);
+```
+
+## 日期函数
+
+|函数名称|描述|
+|--|---|
+|NOW |当前日期和时间|
+|CURDATE |当前日期|
+|CURTIME |当前时间|
+|DATE ADD| 日期变化|
+|DATEDIFF| 计算日期差|
+|DATE_FORMAT| 幂运算|
+
+### NOW
+
+当前日期和时间
+
+``` sql
+SELECT NOW(); 
+```
+
+### CURDATE
+
+当前日期
+
+``` sql
+SELECT CURDATE();
+```
+
+### CURTIME
+
+当前日期
+
+``` sql
+SELECT CURTIME();
+```
+
+### 返回日期中指定的部分
+
+年、月、日、小时、分钟、秒
+
+``` sql
+SELECT YEAR(NOW());
+SELECT MONTH(NOW());
+SELECT MONTHNAME(NOW());
+SELECT DAY(NOW());
+SELECT HOUR(NOW());
+SELECT MINUTE(NOW());
+SELECT SECOND(NOW());
+```
+
+### STR_TO_DATE
+
+将日期格式的字符串转成指定格式的日期。
+
+``` sql
+SELECT STR_TO_DATE('2018-09-09','%Y-%m-%d')
+```
+
+|序号|格式符|功能|
+|--|---|---|
+|1|%Y|4位的年份|
+|2|%y|2为的年份|
+|3|%m|月份(01, 02)|
+|4|%c|月份(1, 2)|
+|5|%d|日(01, 02)|
+|6|%H|小时(24小时制)|
+|7|%h|小时(12小时制)|
+|8|%i|分钟(01, 02)|
+|9|%s|秒(00, 02)|
