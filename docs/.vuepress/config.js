@@ -45,7 +45,8 @@ module.exports = {
         '',
         'sql-intr',
         'sql',
-        'func'
+        'func',
+        'sql-aggregation'
       ],
       '/css/': [
         '',

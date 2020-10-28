@@ -10,7 +10,7 @@
 
 `webpack`结合`babel-laoder`将`javascript`转为向后兼容代码。
 
-简单实现一个`babel-loader`如下：
+**简单实现一个`babel-loader`如下：**
 
 ### webpack.config.js
 

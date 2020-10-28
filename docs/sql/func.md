@@ -245,3 +245,24 @@ SELECT STR_TO_DATE('2018-09-09','%Y-%m-%d')
 |7|%h|小时(12小时制)|
 |8|%i|分钟(01, 02)|
 |9|%s|秒(00, 02)|
+
+### DATE_FORMAT
+将日期转为指定字符串。
+```sql
+SELECT DATE_FORMAT(NOW(), '%Y年%m月%d日')；
+```
+
+### DATE_ADD
+
+```sql
+SELECT DATE_ADD(NOW(), INTERVAL 365 DAY)；
+SELECT DATE_ADD(NOW(), INTERVAL 1 MONTH)；
+SELECT DATE_ADD(NOW(), INTERVAL 1 YEAR)；
+```
+
+
+### DATEDIFF
+
+```sql
+SELECT DATEDIFF('2019-1-1',NOW())；
+```
