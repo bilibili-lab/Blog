@@ -45,7 +45,6 @@ const {
 
 ## 钩子分类
 
-<!-- (https://my-wechat.mdnice.com/wechat.jpg) -->
 
 #### 按类型分类分为四种：BasicHook、Bail、Waterfall、Loop。
 

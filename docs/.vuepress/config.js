@@ -177,7 +177,9 @@ module.exports = {
             'loader',
             'loader-config',
             'loader-use',
-            'loader-train'
+            'loader-train',
+            'loader-pitch',
+            'loader-runner',
           ]
         },
       ]
