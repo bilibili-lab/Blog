@@ -38,9 +38,20 @@ module.exports = {
         text: 'MySql',
         link: '/sql/'
       },
+      {
+        text: 'MongoDB',
+        link: '/mongodb/'
+      },
+
+
 
     ],
     sidebar: {
+
+      '/mongodb/': [
+        '',
+        'mongodb-appendix',
+      ],
       '/sql/': [
         '',
         'sql-intr',
@@ -167,7 +178,7 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'plugin',  
+            'plugin',
           ]
         },
         {
