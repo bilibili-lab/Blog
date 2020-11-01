@@ -47,6 +47,12 @@ mongod --dbpath=D:\Mongodb\data
 
 ![webpack-loader](../images/mongodb-relation.png)
 
+## 官方文档
+
+[官方文档](https://docs.mongodb.com/manual/tutorial/insert-documents/)
+
+提供在线操作 `mongodb` 的 `REPL` 。
+
 ## 数据库操作
 
 ### 使用数据库
@@ -347,3 +353,117 @@ db.collection.remove( <
 * `justOne`（可选）如果设为 true 或 1，则只删除一个文档，如果不设置该参数，或使用默认值 false，则删除所有匹配条件的文档。
 
 ## 查询文档
+
+### find
+
+``` js
+db.collection_name.find(query, projection)
+```
+
+#### 参数
+
+* `collection_name`集合的名字。
+
+* `query` 查询条件。
+
+* `projection` 使用投影操作符指定返回的键，查询时返回文档中所有键值， 只需省略该参数即可（默认省略）。
+
+#### 实例
+
+查询集合下所有的文档，并且文档的所有字段。
+
+``` js
+db.collection_name.find()
+```
+
+返回指定的字段。
+
+ - 1 代表返回该字段。
+ - 0 代表不返回该字段。
+
+``` js
+db.collection_name.find({}, {
+    name: 1
+})
+```
+
+### findOne
+
+只返回一个文档。
+
+### $in
+
+相当于包含、等于，查询时查找包含于指定字段条件的数据。
+
+``` js
+db.collection_name.find({
+    age: {
+        $in: 20
+    }
+});
+
+db.collection_name.find({
+    age: {
+        $in: [20, 30] // 可以使一个数组
+    }
+});
+```
+
+### $nin
+
+* `not in`的缩写。
+* 查询时查找不包含于指定字段条件的数据。
+
+``` js
+db.collection_name.find({
+    age: {
+        $nin: 20
+    }
+});
+
+db.collection_name.find({
+    age: {
+        $nin: [20, 30] // 可以使一个数组
+    }
+});
+```
+
+### 数组查询
+
+[数组查询](https://docs.mongodb.com/manual/tutorial/query-arrays/)
+
+查询数组里的值， 精确匹配。
+
+``` js
+db.inventory.find({
+    color: ["red", "blank"]
+})
+```
+
+考虑数组顺序， 使用 `$all` 。
+
+``` js
+db.inventory.find({
+    color: {
+        $all: ["red", "blank"]
+    }
+})
+```
+
+数组里包含该值， 可以使用字符串。
+
+``` js
+db.inventory.find({
+    tags: "red"
+})
+```
+
+### $where
+
+`$where` 运算符将包含 `JavaScript` 表达式的字符串或完整的 `JavaScript` 函数传递给查询系统。
+
+使用 `this` 或在 `JavaScript` 表达式或函数中引用文档。
+
+``` js
+db.students.find("this.age>20").pretty()
+```
