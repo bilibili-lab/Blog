@@ -50,7 +50,9 @@ module.exports = {
 
       '/mongodb/': [
         '',
+        'mongodb-shell',
         'mongodb-appendix',
+       
       ],
       '/sql/': [
         '',
