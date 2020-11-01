@@ -482,6 +482,25 @@ cursor.forEach(function(obj) {
 cursor.next()
 ```
 
+### 使用_id进行查询
+
+``` js
+db.student.find({
+    _id: ObjectId("5caqweqeqeqwqe")
+})
+```
+
+### 查询结果集的条数
+
+``` js
+// 获取集合的条数
+db.student.conut()
+// 获取指定条件的条数
+db.student.find(age: {
+    $gte: 6
+}).count()
+```
+
 ## 条件操作符
 
 |符号|操作符|缩写|
@@ -500,12 +519,76 @@ cursor.next()
 db.test.find({
     title: /A/
 })
-// 包含B
+// 以A开头
 db.test.find({
     title: /^A/
 })
-// 包含C
+// 以A结尾
 db.test.find({
     title: /A$/
 })
 ```
+
+## 或和与
+
+### $and
+
+可以传入多个键(key)，每个键(key)以逗号隔开。
+
+``` js
+db.col.find({
+    key1: value1,
+    key2: value2
+});
+```
+
+### $or
+
+`$or` 需要接受一个数组，每个对象放入相应的条件。
+
+``` js
+db.col.find({
+    $or: [{
+        key1: value1
+    }, {
+        key2: value2
+    }]
+})
+```
+
+### $and和$or联用
+
+``` js
+db.col.find({
+    "age": {
+        $gt: 50
+    },
+    $or: [{
+        "gender": "male"
+    }, {
+        "school": "本科"
+    }]
+});
+}
+```
+
+## 分页查询
+
+### limit
+
+获取指定的文档的数量。 `limit()` 方法接受一个数字参数，该参数指定从 `MongoDB` 中读取的记录条数。
+
+``` js
+db.student.find().limit(number)
+```
+
+### skip
+
+* `skip()`方法来跳过指定数量的数据。
+
+* `skip()`默认参数为`0`; 
+
+``` js
+db.student.find().limit(number).skip(number)
+```
+
