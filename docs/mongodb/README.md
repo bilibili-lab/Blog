@@ -467,3 +467,45 @@ db.inventory.find({
 ``` js
 db.students.find("this.age>20").pretty()
 ```
+
+### cursor
+
+游标不是查询结果，而是查询的一个返回资源或者接口，通过这个接口，可以逐条读取数据。
+
+``` js
+var cursor = db.cursortest.find()
+cursor.forEach(function(obj) {
+    printjson(obj)
+})
+
+// 获取下一条数据
+cursor.next()
+```
+
+## 条件操作符
+
+|符号|操作符|缩写|
+|---|---|---|
+|大于(>)       |$gt    |greater than |
+| 小于(<)      |$lt    |less than  |
+| 大于等于(>=)  |$gte   |gt equal  |
+| 小于等于(<=)  |$lte   |lt equal |
+| 不等于(!=)    |$ne    |not equal  |
+| 等于(=)       |$eq    |equal  |
+
+## 模糊查询
+
+``` js
+// 包含A
+db.test.find({
+    title: /A/
+})
+// 包含B
+db.test.find({
+    title: /^A/
+})
+// 包含C
+db.test.find({
+    title: /A$/
+})
+```
