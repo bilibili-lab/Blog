@@ -51,8 +51,8 @@ module.exports = {
       '/mongodb/': [
         '',
         'mongodb-shell',
-        'mongodb-appendix',
-       
+        'mongodb-dump',
+        'mongodb-appendix', 
       ],
       '/sql/': [
         '',
