@@ -4,7 +4,7 @@
 
 ## 备份
 
-备份使用 `mongodump` 命令。
+备份使用 [mongodump](https://docs.mongodb.com/manual/reference/program/mongodump/) 命令。
 
 ``` js
 mongodump - h host - d dbname - o dbdirectory
@@ -22,7 +22,7 @@ mongodump - h host - d dbname - o dbdirectory
 
 ## 恢复
 
-`mongorestore` 命令来恢复备份的数据。
+[mongorestore](https://docs.mongodb.com/manual/reference/program/mongorestore/) 命令来恢复备份的数据。
 
 ``` js
 mongorestore - h < hostname > <: port > -d dbname < path >
