@@ -35,16 +35,22 @@ module.exports = {
         link: '/docker/'
       },
       {
-        text: 'MySql',
-        link: '/sql/'
+        text: '数据库',
+        items: [
+          {
+            text: '关系型', items: [{
+              text: 'MySql',
+              link: '/sql/'
+            },]
+          },
+          {
+            text: '非关系型', items: [{
+              text: 'MongoDB',
+              link: '/mongodb/'
+            },]
+          }
+        ]
       },
-      {
-        text: 'MongoDB',
-        link: '/mongodb/'
-      },
-
-
-
     ],
     sidebar: {
 
@@ -52,7 +58,7 @@ module.exports = {
         '',
         'mongodb-shell',
         'mongodb-dump',
-        'mongodb-appendix', 
+        'mongodb-appendix',
       ],
       '/sql/': [
         '',

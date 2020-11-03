@@ -40,13 +40,13 @@ use: ["a-loader", "b-loader", "c-loader"];
 ```
 
 ``` js
-| -a - loader `pitch` |
-    -b - loader `pitch` |
+-a - loader `pitch` |
+  -b - loader `pitch` |
     -c - loader `pitch` |
-    -requested module is picked up as a dependency |
+     -requested module is picked up as a dependency |
     -c - loader normal execution |
-    -b - loader normal execution |
-    -a - loader normal execution
+  -b - loader normal execution |
+-a - loader normal execution
 ```
 
 * 如果其中任何一个`pitch laoder`返回了值，就相当于在它及它右边的`laoder`已经执行完毕完了。
