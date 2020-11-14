@@ -11,12 +11,14 @@
 ``` js
 module.exports = function(source) {
     console.log("normal loader is running");
+    console.log(this.data.pitch) // 'pitch'
     return source;
 };
 // remainingRequest:loader 链中排在自己后面的 loader 以及资源文件的绝对路径以!作为连接符组成的字符串。
 // precedingRequest：loader 链中排在自己前面的 loader 的绝对路径以!作为连接符组成的字符串。
 // data：每个 loader 中存放在上下文中的固定字段，可用于 pitch 函数 给 normal 函数之间传递数据。
 module.exports.pitch = function(remainingRequest, precedingRequest, data) {
+    data.pitch = 'pitch'
     console.log("pitch loader is running");
 };
 ```

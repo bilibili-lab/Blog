@@ -82,7 +82,7 @@ this.cacheable(true);
 
 [this.async](https://www.webpackjs.com/api/loaders/#this-async)
 
-``` sh
+```js
 module.exprots = {
     let callback = this.async()
     doSomeAsyncOperation(content,(err, result)=> {
@@ -101,7 +101,7 @@ module.exports.raw = true;
 
 ### 获取 Loader 的 options
 
-``` sh
+``` js
 const laoderUtils = require('loader-utils')
 
 module.exports = (source) => {
@@ -114,7 +114,7 @@ module.exports = (source) => {
 
 [this.callback](https://www.webpackjs.com/api/loaders/#this-callback) `laoder` 有些场景下还需要返回除了内容之外的东西。
 
-``` sh
+```js
 this.callback(
   err: Error | null,
   content: string | Buffer,
@@ -155,3 +155,4 @@ module.exports = (source) => {
 |this.emitFile | 输出一个文件 |
 |loader-utils.stringifyRequest | 把一个请求字符串转成一个字符串，以便能在 request 或者 import 中使用以避免绝对路劲，如果你在一个 loader 中生成代码的话请使用这个，而非使用 JSOstringify()|
 |loader-utils.interpolateName | 使用多个占位符或一个正则表达式转换为一个文件的模块，这个模块和正则表达式被设置为查询参数，在当前 laoder 的上下文被称为 name 或者 regExp | 
+|this.data | 在 pitch 阶段和正常阶段之间共享的 data 对象。 |
