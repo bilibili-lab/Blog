@@ -29,7 +29,8 @@
 
 基础篇
 
-- [如何实现深浅拷贝](/docs/JS/1.deepclone.md)
+- [如何实现深浅拷贝](/docs/JS/1.md)
+- [手写实现 apply、call、bind](/docs/JS/2.md)
 
 <!-- **异步篇**
 
