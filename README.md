@@ -25,15 +25,19 @@
 
 最大的心愿就是完成一本书。 -->
 
+CSS篇
+
+- [垂直居中](/docs/md/1.md)
+
 基础篇
 
-- [如何实现深浅拷贝](/docs/JS/1.md)
-- [手写实现 apply、call、bind](/docs/JS/2.md)
+- [如何实现深浅拷贝](/docs/md/1.md)
+- [手写实现 apply、call、bind](/docs/md/2.md)
 
 浏览器篇
 
-- [浏览器同源策略与跨域解决方案](/docs/JS/3.md)
-- [浏览器缓存策略](/docs/JS/3.md)
+- [浏览器同源策略与跨域解决方案](/docs/md/3.md)
+- [浏览器缓存策略](/docs/md/4.md)
 
 <!-- ## 数据结构与算法
 
