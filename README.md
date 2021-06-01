@@ -25,12 +25,28 @@
 
 最大的心愿就是完成一本书。 -->
 
-## JavaScript
+CSS篇
+
+- [垂直居中](/docs/md/5.md)
 
 基础篇
 
 - [如何实现深浅拷贝](/docs/JS/1.md)
 - [手写实现 apply、call、bind](/docs/JS/2.md)
+- [如何实现深浅拷贝](/docs/md/1.md)
+- [手写实现 apply、call、bind](/docs/md/2.md)
+- JS继承的 6 种方式(待更新)
+- 前端二进制(待更新)
+
+浏览器篇
+
+- [浏览器同源策略与跨域解决方案](/docs/md/3.md)
+- [浏览器缓存策略](/docs/md/4.md)
+- 内存管理及垃圾回收机制(待更新)
+
+<!-- ## 数据结构与算法
+
+树 -->
 
 <!-- - [手写实现 new 、instanceof 关键字](/docs/JS/3.md)
 - [JavaScript 继承的 6 中方式](/docs/JS/3.md) -->
@@ -45,8 +61,6 @@
 - [手写实现符合 Promise/A+ 规范的 Promise](/md/js/10.md)  -->
 
   <!-- - [JS继承的 6 种方式](/md/js/1.md) 
-
-  - [手写实现 new、apply、call、bind](/md/js/1.md) -->
 
 <!-- - 异步编程篇
 
