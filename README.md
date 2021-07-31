@@ -31,6 +31,8 @@ CSS篇
 
 基础篇
 
+- [如何实现深浅拷贝](/docs/JS/1.md)
+- [手写实现 apply、call、bind](/docs/JS/2.md)
 - [如何实现深浅拷贝](/docs/md/1.md)
 - [手写实现 apply、call、bind](/docs/md/2.md)
 - JS继承的 6 种方式(待更新)
@@ -52,15 +54,19 @@ CSS篇
 
 树 -->
 
-<!-- **异步篇**
+<!-- - [手写实现 new 、instanceof 关键字](/docs/JS/3.md)
+- [JavaScript 继承的 6 中方式](/docs/JS/3.md) -->
 
-- [前端异步编程有哪些方式](/md/js/10.md)
+<!-- ## Node
+
+- [手写实现 EventEmitter](/docs/JS/2.md) -->
+
+<!-- - [前端异步编程有哪些方式](/md/js/10.md)
 - [深入理解 Promise 的使用姿势](/md/js/10.md)
 - [深入理解 Generator、Async/await 异步编程](/md/js/10.md)
-- [手写实现一个 EventEmitter](/md/js/10.md)
-- [手写实现符合 Promise/A+ 规范的 Promise](/md/js/10.md) -->
+- [手写实现符合 Promise/A+ 规范的 Promise](/md/js/10.md)  -->
 
-  <!-- - [JS继承的 6 种方式](/md/js/1.md)
+  <!-- - [JS继承的 6 种方式](/md/js/1.md) 
 
 <!-- - 异步编程篇
 
