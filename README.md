@@ -34,7 +34,6 @@ CSS篇
 - [如何实现深浅拷贝](/docs/JS/1.md)
 - [手写实现 apply、call、bind](/docs/JS/2.md)
 - [如何实现深浅拷贝](/docs/md/1.md)
-- [手写实现 apply、call、bind](/docs/md/2.md)
 - JS继承的 6 种方式(待更新)
 - 前端二进制(待更新)
 
