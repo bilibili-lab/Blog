@@ -1,4 +1,4 @@
-# 前端学习笔记
+# 学习笔记
 
 <!-- 
 ## 简介
@@ -33,7 +33,8 @@ CSS篇
 
 - [实现深浅拷贝](/docs/md/1.md)
 - [实现 apply、call、bind](/docs/md/2.md)
-- [实现 instanceof](/docs/md/6.md)
+- [实现 new 关键字](/docs/md/7.md)
+- [实现 instanceof 关键字](/docs/md/6.md)
 - JS继承的 6 种方式(待更新)
 - 前端二进制(待更新)
 
