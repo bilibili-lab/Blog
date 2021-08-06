@@ -35,6 +35,7 @@ CSS篇
 - [实现 apply、call、bind](/docs/md/2.md)
 - [实现 new 关键字](/docs/md/7.md)
 - [实现 instanceof 关键字](/docs/md/6.md)
+- [JavaScript 获取对象属性方式](/docs/md/8.md)
 - JS继承的 6 种方式(待更新)
 - 前端二进制(待更新)
 
@@ -46,7 +47,7 @@ CSS篇
 
 React
 
-- [谈一谈对 React 的理解](/docs/react/1.md)
+- [对 React 的理解](/docs/react/1.md)
 
 数据结构与算法
 
