@@ -6,7 +6,7 @@ CSS
 
 基础
 
-* [实现 深浅拷贝](/do（cs/md/1.md)
+* [实现 深浅拷贝](/docs/cs/md/1.md)
 * [实现 apply、call、bind](/docs/md/2.md)
 * [实现 new 关键字](/docs/md/7.md)
 * [实现 instanceof 关键字](/docs/md/6.md)
