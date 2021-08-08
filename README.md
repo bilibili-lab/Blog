@@ -11,6 +11,7 @@ CSS
 * [实现 new 关键字](/docs/md/7.md)
 * [实现 instanceof 关键字](/docs/md/6.md)
 * [实现 Promise.all](/docs/md/9.md)
+* [实现 防抖与节流](/docs/md/11.md)
 * [JS 继承 6 种方式](/docs/md/10.md)
 * [JS 获取对象属性方式](/docs/md/8.md)
 * 前端二进制(待更新)
