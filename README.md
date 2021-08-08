@@ -26,6 +26,10 @@ React
 
 * [对 React 的理解](/docs/react/1.md)
 
+设计模式
+
+* [单例设计模式](/docs/design_patterns/1.md)
+
 数据结构与算法
 
 * 栈
