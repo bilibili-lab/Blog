@@ -12,10 +12,11 @@
 * [实现 new 关键字](/docs/md/7.md)
 * [实现 instanceof 关键字](/docs/md/6.md)
 * [实现 Promise.all](/docs/md/9.md)
+* [实现 数组扁平化的 6 种方式](/docs/md/13.md)
 * [实现 防抖与节流](/docs/md/11.md)
 * [JS 继承 6 种方式](/docs/md/10.md)
 * [JS 获取对象属性方式](/docs/md/8.md)
-* [实现数组扁平化的 6 种方式](/docs/md/13.md)
+
 * 前端二进制(待更新)
 
 ## 浏览器
@@ -28,6 +29,22 @@
 ## React
 
 * [对 React 的理解](/docs/react/1.md)
+
+## 面向对象
+
+以类和对象作为组织的代码基本方式，并实现`封装`、`继承`、`多态`等特性。
+
+软件开发经历三个阶段：
+
+* 面向对象分析`(OOA, Object-Oriented Analysis)`
+* 面向对象设计`(OOD, Object-Oriented Design)`
+* 面向对象编程`(OOP, Object-Oriented Programming)`
+
+都是相辅相成的: 分析是为了设计，设计是为了编程。
+
+* [继承](/docs/design_patterns/2.md)
+* [封装](/docs/react/1.md)
+* [多态](/docs/react/1.md)
 
 ## 设计模式
 
