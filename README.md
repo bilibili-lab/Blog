@@ -31,9 +31,14 @@
 
 ## 设计模式
 
-设计原则
+设计模式的六大原则有：
 
-111
+* [Single Responsibility Principle：单一职责原则](/docs/react/1.md)
+* [Open Closed Principle：开闭原则](/docs/react/1.md)
+* [Liskov Substitution Principle：里氏替换原则](/docs/react/1.md)
+* [Law of Demeter：迪米特法则](/docs/react/1.md)
+* [Interface Segregation Principle：接口隔离原则](/docs/react/1.md)
+* [Dependence Inversion Principle：依赖倒置原则](/docs/react/1.md)
 
 设计模式
 
@@ -45,7 +50,6 @@
 
 ## 数据结构与算法
   
-
 * 栈
   * [栈的基本概念和实现](/docs/algorithm/1.md)
   * 常用算法题
