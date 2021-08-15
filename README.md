@@ -43,8 +43,8 @@
 都是相辅相成的: 分析是为了设计，设计是为了编程。
 
 * [继承](/docs/design_patterns/2.md)
-* [封装](/docs/react/1.md)
-* [多态](/docs/react/1.md)
+* [封装](/docs/design_patterns/3.md)
+* [多态](/docs/design_patterns/4.md)
 
 ## 设计模式
 
