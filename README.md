@@ -16,7 +16,7 @@
 * [实现 防抖与节流](/docs/md/11.md)
 * [JS 继承 6 种方式](/docs/md/10.md)
 * [JS 获取对象属性方式](/docs/md/8.md)
-
+* [JS == 和 === 和 Object.is 函数的区别](/docs/md/14.md)
 * 前端二进制(待更新)
 
 ## 浏览器
@@ -28,9 +28,13 @@
 
 ## React
 
-* [对 React 的理解](/docs/react/1.md)
+* [React 的理解](/docs/react/1.md)
+* [PureComponent](/docs/react/2.md)
 
-## 面向对象
+
+## 面向函数式编程
+
+## 面向对象编程
 
 以类和对象作为组织的代码基本方式，并实现`封装`、`继承`、`多态`等特性。
 
@@ -50,12 +54,12 @@
 
 设计模式的六大原则有：
 
+* [Open Closed Principle：开闭原则](/docs/design_patterns/5.md)
 * [Single Responsibility Principle：单一职责原则](/docs/react/1.md)
-* [Open Closed Principle：开闭原则](/docs/react/1.md)
 * [Liskov Substitution Principle：里氏替换原则](/docs/react/1.md)
-* [Law of Demeter：迪米特法则](/docs/react/1.md)
 * [Interface Segregation Principle：接口隔离原则](/docs/react/1.md)
 * [Dependence Inversion Principle：依赖倒置原则](/docs/react/1.md)
+* [Law of Demeter：迪米特法则](/docs/react/1.md)
 
 设计模式
 
