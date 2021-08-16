@@ -28,8 +28,8 @@
 
 ## React
 
-* [React 的理解](/docs/react/1.md)
-* [PureComponent](/docs/react/2.md)
+* [React 的理解](/docs/react/2.md)
+* [PureComponent](/docs/react/1.md)
 
 
 ## 面向函数式编程
