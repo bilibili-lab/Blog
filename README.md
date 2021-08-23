@@ -34,6 +34,7 @@
 
 ## 前端安全
 
+
 * [XSS](/docs/react/1.md)
 
 ## 面向函数式编程
@@ -75,20 +76,44 @@
 
 ## 数据结构与算法
 
-* 数组
+如何评价一个算法的好坏
+
+* 空间复杂度
+* 时间复杂度
+
+数组
+
+* [数组](/docs/algorithm/1.md)
+* Leetcode算法题
+  * [283. 移动零](https://leetcode-cn.com/problems/move-zeroes/solution/yi-dong-ling-shuang-zhi-zhen-liang-ci-bi-a47b/)
+
+链表
+
+* [链表的基本概念和实现](/docs/algorithm/1.md)
+* [双向链表的基本概念和实现](/docs/algorithm/1.md)
+* Leetcode算法题
+  * 判断是否是有效括号
   
-* 栈
-  * [栈的基本概念和实现](/docs/algorithm/1.md)
-  * 常用算法题
-    * 判断是否是有效括号
+栈
 
-* 队列
-  * [队列的基本概念和实现](/docs/algorithm/2.md)
-  * [双端队列的基本概念和实现](/docs/algorithm/3.md)
-  * 常用算法题
-    * 判断是否是有效括号
+* [栈的基本概念和实现](/docs/algorithm/1.md)
+* Leetcode算法题
+  * 判断是否是有效括号
 
-* 树
+队列
+
+* [队列的基本概念和实现](/docs/algorithm/2.md)
+* [双端队列的基本概念和实现](/docs/algorithm/3.md)
+* Leetcode算法题
+  * 判断是否是有效括号
+
+树
+
+* [树的基本概念](/docs/algorithm/2.md)
+* [二叉树搜索树的概念和实现](/docs/algorithm/2.md)
+* [AVL树的概念和实现](/docs/algorithm/2.md)
+* [红黑树树的概念和实现](/docs/algorithm/2.md)
+* Leetcode算法题
   * [二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/solution/er-cha-shu-de-qian-xu-bian-li-by-wang-41-1i7n/)
   * [二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/solution/er-cha-shu-de-zhong-xu-bian-li-by-wang-4-rb65/)
   * [二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/solution/er-cha-shu-de-hou-xu-bian-li-by-wang-41-7hkg/)
