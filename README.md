@@ -93,7 +93,9 @@
 * [链表的基本概念和实现](/docs/algorithm/1.md)
 * [双向链表的基本概念和实现](/docs/algorithm/1.md)
 * Leetcode算法题
-  * 判断是否是有效括号
+  * [20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/solution/you-xiao-de-gua-hao-zhan-jie-fa-he-xun-h-m8ro/)
+
+跳表
   
 栈
 
