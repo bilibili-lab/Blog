@@ -34,7 +34,6 @@
 
 ## 前端安全
 
-
 * [XSS](/docs/react/1.md)
 
 ## 面向函数式编程
@@ -86,6 +85,8 @@
 * [数组](/docs/algorithm/1.md)
 * Leetcode算法题
   * [1. 两数之和](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-bao-ji-jie-fa-he-ha-xi-4ghcz/)
+  * [1. 三数之和](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-bao-ji-jie-fa-he-ha-xi-4ghcz/)
+  * [11. 盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/solution/sheng-zui-duo-shui-de-rong-qi-shuang-zhi-sp94/)
   * [283. 移动零](https://leetcode-cn.com/problems/move-zeroes/solution/yi-dong-ling-shuang-zhi-zhen-liang-ci-bi-a47b/)
 
 链表
@@ -101,7 +102,7 @@
 
 * [栈的基本概念和实现](/docs/algorithm/1.md)
 * Leetcode算法题
-  * 判断是否是有效括号
+  * [20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/solution/you-xiao-de-gua-hao-zhan-jie-fa-he-xun-h-m8ro/)
 
 队列
 
@@ -123,3 +124,11 @@
   * [N叉树的前序遍历](https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/solution/ncha-shu-de-qian-xu-bian-li-by-wang-41-jk6g/)
   * [N叉树的后序遍历](https://leetcode-cn.com/problems/n-ary-tree-postorder-traversal/solution/ncha-shu-de-hou-xu-bian-li-by-wang-41-hfsx/)
   * [N叉树层次遍历](https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/solution/ncha-shu-de-ceng-xu-bian-li-by-wang-41-5qrm/)
+
+递归
+
+* [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
+
+动态规划
+
+* [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
