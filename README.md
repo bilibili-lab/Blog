@@ -85,8 +85,9 @@
 * [数组](/docs/algorithm/1.md)
 * Leetcode算法题
   * [1. 两数之和](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-bao-ji-jie-fa-he-ha-xi-4ghcz/)
-  * [1. 三数之和](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-bao-ji-jie-fa-he-ha-xi-4ghcz/)
+  * [15. 三数之和](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-bao-ji-jie-fa-he-ha-xi-4ghcz/)
   * [11. 盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/solution/sheng-zui-duo-shui-de-rong-qi-shuang-zhi-sp94/)
+  * [66. 加一](https://leetcode-cn.com/problems/plus-one/solution/javascript-jia-yi-tong-su-yi-dong-by-wan-wnmu/)
   * [283. 移动零](https://leetcode-cn.com/problems/move-zeroes/solution/yi-dong-ling-shuang-zhi-zhen-liang-ci-bi-a47b/)
 
 链表
