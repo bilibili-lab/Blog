@@ -62,7 +62,7 @@
 
 * [对称加密](/docs/encryption/1.md)
 * [非对称加密](/docs/encryption/2.md)
-* [散列函数(hash)](/docs/encryption/1.md)
+* [散列函数(hash)](/docs/encryption/3.md)
 
 ## 面向函数式编程
 
