@@ -15,7 +15,7 @@
 * [实现 数组扁平化的 6 种方式](/docs/md/13.md)
 * [实现 防抖与节流](/docs/md/11.md)
 * [JS 继承 6 种方式](/docs/md/10.md)
-* [JS 获取对象属性方式](/docs/md/8.md)
+* [JS 获取对象属性方式(遍历)](/docs/md/8.md)
 * [JS == 和 === 和 Object.is 函数的区别](/docs/md/14.md)
 * 前端二进制(待更新)
 
@@ -35,6 +35,27 @@
 ## 前端安全
 
 * [XSS](/docs/react/1.md)
+* CSRF
+* 点击劫持
+* 传输安全
+* Cooikes
+* 密码安全
+* 接入层注入问题
+* 接入层上传问题
+
+## 加密算法
+
+加密的目的:
+
+* 保密性：防止用户的标识或数据被读取。
+* 数据完整性：防止数据被更改。
+* 身份验证：确保数据发自特定的一方。
+
+加密分类：
+
+* [对称加密](/docs/encryption/1.md)
+* [非对称加密](/docs/encryption/1.md)
+* [散列函数(hash)](/docs/encryption/1.md)
 
 ## 面向函数式编程
 
@@ -87,7 +108,10 @@
   * [1. 两数之和](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-bao-ji-jie-fa-he-ha-xi-4ghcz/)
   * [15. 三数之和](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-bao-ji-jie-fa-he-ha-xi-4ghcz/)
   * [11. 盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/solution/sheng-zui-duo-shui-de-rong-qi-shuang-zhi-sp94/)
+  * [26. 删除有序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
   * [66. 加一](https://leetcode-cn.com/problems/plus-one/solution/javascript-jia-yi-tong-su-yi-dong-by-wan-wnmu/)
+  * [88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)
+  * [189. 旋转数组](https://leetcode-cn.com/problems/rotate-array/)
   * [283. 移动零](https://leetcode-cn.com/problems/move-zeroes/solution/yi-dong-ling-shuang-zhi-zhen-liang-ci-bi-a47b/)
 
 链表
