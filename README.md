@@ -1,5 +1,8 @@
 # 学习笔记
 
+* 种树最好的时间在十年前其次是现在
+* 牛顿曾经说过:如果说我看得比别人更远些,那是因为我站在巨人的肩膀上
+
 ## CSS
 
 * [垂直居中](/docs/md/5.md)
@@ -32,7 +35,6 @@
 * [React 的理解](/docs/react/2.md)
 * [PureComponent](/docs/react/1.md)
 
-
 ## 网络
 
 * [https](/docs/react/1.md)
@@ -59,7 +61,7 @@
 加密分类：
 
 * [对称加密](/docs/encryption/1.md)
-* [非对称加密](/docs/encryption/1.md)
+* [非对称加密](/docs/encryption/2.md)
 * [散列函数(hash)](/docs/encryption/1.md)
 
 ## 面向函数式编程
@@ -154,8 +156,6 @@
   * [N叉树的前序遍历](https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/solution/ncha-shu-de-qian-xu-bian-li-by-wang-41-jk6g/)
   * [N叉树的后序遍历](https://leetcode-cn.com/problems/n-ary-tree-postorder-traversal/solution/ncha-shu-de-hou-xu-bian-li-by-wang-41-hfsx/)
   * [N叉树层次遍历](https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/solution/ncha-shu-de-ceng-xu-bian-li-by-wang-41-5qrm/)
-
-
 
 LRU
 
