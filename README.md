@@ -145,8 +145,8 @@
 
 树
 
-* [树的基本概念](/docs/algorithm/2.md)
-* [二叉树搜索树的概念和实现](/docs/algorithm/2.md)
+* [树的基本概念](/docs/algorithm/4.md)
+* [二叉搜索树实现](/docs/algorithm/5.md)
 * [AVL树的概念和实现](/docs/algorithm/2.md)
 * [红黑树树的概念和实现](/docs/algorithm/2.md)
 * Leetcode算法题
@@ -157,9 +157,6 @@
   * [N叉树的后序遍历](https://leetcode-cn.com/problems/n-ary-tree-postorder-traversal/solution/ncha-shu-de-hou-xu-bian-li-by-wang-41-hfsx/)
   * [N叉树层次遍历](https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/solution/ncha-shu-de-ceng-xu-bian-li-by-wang-41-5qrm/)
 
-LRU
-
-* [LRU](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
 
 递归
 
@@ -168,3 +165,7 @@ LRU
 动态规划
 
 * [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
+
+LRU
+
+* [LRU](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
