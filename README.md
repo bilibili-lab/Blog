@@ -1,7 +1,7 @@
 # 学习笔记
 
-* 种树最好的时间在十年前其次是现在
-* 牛顿曾经说过:如果说我看得比别人更远些,那是因为我站在巨人的肩膀上
+* 种树最好的时间在十年前其次是现在。
+* 牛顿曾经说过:如果说我看得比别人更远些,那是因为我站在巨人的肩膀上。
 
 ## CSS
 
@@ -105,8 +105,7 @@
 
 如何评价一个算法的好坏
 
-* 空间复杂度
-* 时间复杂度
+* [时间复杂度和空间复杂度](/docs/algorithm/1.md)
 
 数组
 
@@ -150,22 +149,52 @@
 * [AVL树的概念和实现](/docs/algorithm/2.md)
 * [红黑树树的概念和实现](/docs/algorithm/2.md)
 * Leetcode算法题
-  * [144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/solution/er-cha-shu-de-qian-xu-bian-li-by-wang-41-1i7n/)
   * [94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/solution/er-cha-shu-de-zhong-xu-bian-li-by-wang-4-rb65/)
+  * [144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/solution/er-cha-shu-de-qian-xu-bian-li-by-wang-41-1i7n/)
   * [145. 二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/solution/er-cha-shu-de-hou-xu-bian-li-by-wang-41-7hkg/)
   * [589. N 叉树的前序遍历](https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/solution/ncha-shu-de-qian-xu-bian-li-by-wang-41-jk6g/)
   * [590. N 叉树的后序遍历](https://leetcode-cn.com/problems/n-ary-tree-postorder-traversal/solution/ncha-shu-de-hou-xu-bian-li-by-wang-41-hfsx/)
   * [429. N 叉树的层序遍历](https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/solution/ncha-shu-de-ceng-xu-bian-li-by-wang-41-5qrm/)
 
+字典树和并查集
 
 递归
 
 * [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
+* [509. 斐波那契数](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
+
+分治、回溯
+
+深度优先搜索和广度优选搜索
+
+二分查找
+
+* [二分查找基本概念](/docs/algorithm/6.md)
 
 动态规划
 
 * [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
+* [509. 斐波那契数](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
+
+贪心算法
 
 LRU
 
-* [LRU](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
+* [LRU算法基本概念](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
+* Leetcode算法题
+  * [146. LRU 缓存机制](https://leetcode-cn.com/problems/lru-cache/#/)
+
+排序算法
+
+* [排序动画网站](https://www.webhek.com/post/comparison-sort.html)
+* Leetcode算法题
+  * [冒泡排序](https://leetcode-cn.com/problems/sort-an-array/solution/tu-jie-jing-dian-pai-xu-by-wang-41/)
+  * [选择排序](https://leetcode-cn.com/problems/sort-an-array/solution/tu-jie-jing-dian-pai-xu-by-wang-41/)
+  * [插入排序](https://leetcode-cn.com/problems/sort-an-array/solution/tu-jie-jing-dian-pai-xu-by-wang-41/)
+  * [快速排序](https://leetcode-cn.com/problems/sort-an-array/solution/tu-jie-jing-dian-pai-xu-by-wang-41/)
+
+字符串算法
+
+布隆过滤器
+
+位运算
