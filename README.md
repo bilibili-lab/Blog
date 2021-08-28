@@ -1,7 +1,8 @@
 # 学习笔记
 
+* 记录成为更好的自己。
 * 种树最好的时间在十年前其次是现在。
-* 牛顿曾经说过:如果说我看得比别人更远些,那是因为我站在巨人的肩膀上。
+* 牛顿曾经说过:`如果说我看得比别人更远些,那是因为我站在巨人的肩膀上`。
 
 ## CSS
 
@@ -170,6 +171,12 @@
 二分查找
 
 * [二分查找基本概念](/docs/algorithm/6.md)
+* Leetcode算法题
+  * [69. x 的平方根](https://leetcode-cn.com/problems/sqrtx/solution/x-de-ping-fang-gen-er-fen-cha-zhao-by-wa-wuwr/)
+  * [367. 有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square/solution/367-you-xiao-de-wan-quan-ping-fang-shu-b-n908/)
+  * [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
+  * [153. 寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)
+  * [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
 
 动态规划
 
