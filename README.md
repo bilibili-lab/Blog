@@ -125,7 +125,11 @@
 * [链表的基本概念和实现](/docs/algorithm/1.md)
 * [双向链表的基本概念和实现](/docs/algorithm/1.md)
 * Leetcode算法题
-  * [20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/solution/you-xiao-de-gua-hao-zhan-jie-fa-he-xun-h-m8ro/)
+  * [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
+  * [24. 两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)
+  * [141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)
+  * [142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)
+  * [25. K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)
 
 跳表
   
