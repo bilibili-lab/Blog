@@ -42,7 +42,7 @@
 
 ## 前端安全
 
-* [XSS](/docs/react/1.md)
+* [XSS](/docs/safety/1.md)
 * CSRF
 * 点击劫持
 * 传输安全
