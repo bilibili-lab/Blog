@@ -123,7 +123,7 @@
 链表
 
 * [链表的基本概念和实现](/docs/algorithm/8.md)
-* [双向链表的基本概念和实现](/docs/algorithm/8.md)
+* [双向链表的基本概念和实现](/docs/algorithm/9.md)
 * Leetcode算法题
   * [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
   * [24. 两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)
