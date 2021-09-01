@@ -203,8 +203,54 @@ LRU
   * [插入排序](https://leetcode-cn.com/problems/sort-an-array/solution/tu-jie-jing-dian-pai-xu-by-wang-41/)
   * [快速排序](https://leetcode-cn.com/problems/sort-an-array/solution/tu-jie-jing-dian-pai-xu-by-wang-41/)
 
-字符串算法
-
 布隆过滤器
 
 位运算
+
+字符串算法
+
+* 基础算法
+  * [709. 转换成小写字母](https://leetcode-cn.com/problems/to-lower-case/)
+  * [58. 最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/)
+  * [771. 宝石与石头](https://leetcode-cn.com/problems/jewels-and-stones/)
+  * [387. 字符串中的第一个唯一字符](https://leetcode-cn.com/problems/first-unique-character-in-a-string/)
+  * [8. 字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/)
+* 字符串操作问题
+  * [14. 最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/description/)
+  * [344. 反转字符串](https://leetcode-cn.com/problems/reverse-string)
+  * [541. 反转字符串 II](https://leetcode-cn.com/problems/reverse-string-ii/)
+  * [151. 翻转字符串里的单词](https://leetcode-cn.com/problems/reverse-words-in-a-string/)
+  * [557. 反转字符串中的单词 III](https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/)
+  * [917. 仅仅反转字母](https://leetcode-cn.com/problems/reverse-only-letters/)
+* 异味词
+  * [242. 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)
+  * [49. 字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/)
+  * [438. 找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/)
+* 回文串问题
+  * [125. 验证回文串](https://leetcode-cn.com/problems/valid-palindrome/)
+  * [680. 验证回文字符串 Ⅱ](https://leetcode-cn.com/problems/valid-palindrome-ii/)
+  * [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)
+
+* 最长子串、子序列问题
+  * <https://leetcode-cn.com/problems/longest-common-subsequence/>
+  * <https://leetcode-cn.com/problems/edit-distance/>
+  * <https://leetcode-cn.com/problems/longest-palindromic-substring/>
+* 字符串 +DP 问题
+  * <https://leetcode-cn.com/problems/regular-expression-matching/>
+  * <https://leetcode-cn.com/problems/regular-expression-matching/solution/ji-yu-guan-fang-ti-jie-gen-xiang-xi-de-jiang-jie-b/>
+  * <https://leetcode-cn.com/problems/wildcard-matching/>
+  * <https://leetcode-cn.com/problems/distinct-subsequences/>
+* 字符串匹配算法
+  * <https://leetcode-cn.com/problems/first-unique-character-in-a-string/>
+  * <https://leetcode-cn.com/problems/string-to-integer-atoi/>
+  * <https://leetcode-cn.com/problems/reverse-string-ii/>
+  * <https://leetcode-cn.com/problems/reverse-words-in-a-string/>
+  * <https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/>
+  * <https://leetcode-cn.com/problems/reverse-only-letters/>
+  * <https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/>
+  * <https://leetcode-cn.com/problems/longest-palindromic-substring/>
+  * <https://leetcode-cn.com/problems/isomorphic-strings/>
+  * <https://leetcode-cn.com/problems/valid-palindrome-ii/>
+  * <https://leetcode-cn.com/problems/wildcard-matching>
+  * <https://leetcode-cn.com/problems/longest-valid-parentheses>
+  * <https://leetcode-cn.com/problems/distinct-subsequences/>
