@@ -122,8 +122,8 @@
 
 链表
 
-* [链表的基本概念和实现](/docs/algorithm/1.md)
-* [双向链表的基本概念和实现](/docs/algorithm/1.md)
+* [链表的基本概念和实现](/docs/algorithm/8.md)
+* [双向链表的基本概念和实现](/docs/algorithm/8.md)
 * Leetcode算法题
   * [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
   * [24. 两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)
@@ -151,7 +151,7 @@
 * [树的基本概念](/docs/algorithm/4.md)
 * [二叉搜索树实现](/docs/algorithm/5.md)
 * [AVL树的概念和实现](/docs/algorithm/2.md)
-* [红黑树树的概念和实现](/docs/algorithm/2.md)
+* [红黑树的概念和实现](/docs/algorithm/2.md)
 * Leetcode算法题
   * [94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/solution/er-cha-shu-de-zhong-xu-bian-li-by-wang-4-rb65/)
   * [144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/solution/er-cha-shu-de-qian-xu-bian-li-by-wang-41-1i7n/)

@@ -1,26 +1,3 @@
-# 链表
-
-在存储多个元素时，常用的数据结构大多数使用 `数组` 或者 `链表` 。
-
-链表不同于数组，链表中的元素在内存中并不是连续位置存放，每个元素有一个存储元素本身的节点和一个指像下一个元素的引用组成。
-
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0715b4b492c040c2be8a65a9f4162b48~tplv-k3u1fbpfcp-watermark.image)
-
-相对于传统的数组，链表的一个好处在于，添加或移除元素的时候不需要移动其他元素。然而，链表需要使用指针，因此实现链表时需要额外注意。数组的另一个细节是可以直接访问任何位置的任何元素，而要想访问链表中间的一个元素，需要从起点（表头）开始迭代列表直到找到所需的元素。
-
-## 链表的常用方法
-
-* `push(element)`：向列表尾部添加一个新的元素。
-* `insert(element,position)`在链表指定位置添加一个新的元素。
-* `getElementAt(index)`, 返回链表指定位置的元素，如果指定元素不存在返回`undefiend`。
-* `remove(element)` 从链表中移除一个元素。
-* `indexof(element)` 返回元素在链表的索引，如果链表没有该元素则返回`-1`。
-* `removeAt(position)`：从列表的特定位置移除一项。
-* `isEmpty()`：如果链表中不包含任何元素，返回true，如果链表长度大于0则返回false。
-* `size()`：返回链表包含的元素个数。
-* `toString()`：让其只输出元素的值。
-
-```js
 class Node {
     constructor(element) {
         this.value = element;
@@ -115,4 +92,3 @@ class LinkedList {
         return this.head
     }
 }
-```
