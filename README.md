@@ -142,13 +142,13 @@
 * [栈的基本概念和实现](/docs/algorithm/1.md)
 * Leetcode算法题
   * [20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/solution/you-xiao-de-gua-hao-zhan-jie-fa-he-xun-h-m8ro/)
+  * [84. 柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)
+  * [155. 最小栈](https://leetcode-cn.com/problems/min-stack/solution/zui-xiao-zhan-by-leetcode-solution/)
 
 队列
 
 * [队列的基本概念和实现](/docs/algorithm/2.md)
 * [双端队列的基本概念和实现](/docs/algorithm/3.md)
-* Leetcode算法题
-  * 判断是否是有效括号
 
 树
 
@@ -181,6 +181,7 @@
 * Leetcode算法题
   * [69. x 的平方根](https://leetcode-cn.com/problems/sqrtx/solution/x-de-ping-fang-gen-er-fen-cha-zhao-by-wa-wuwr/)
   * [367. 有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square/solution/367-you-xiao-de-wan-quan-ping-fang-shu-b-n908/)
+  * [74. 搜索二维矩阵](https://leetcode-cn.com/problems/search-a-2d-matrix/solution/74-sou-suo-er-wei-ju-zhen-by-wang-41-ssm3/)
   * [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
   * [153. 寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)
   * [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
