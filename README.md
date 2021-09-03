@@ -36,6 +36,10 @@
 * [React 的理解](/docs/react/2.md)
 * [PureComponent](/docs/react/1.md)
 
+## TS
+
+* [JSDoc规范](https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html)
+
 ## 网络
 
 * [https](/docs/react/1.md)
@@ -125,7 +129,7 @@
 * [链表的基本概念和实现](/docs/algorithm/8.md)
 * [双向链表的基本概念和实现](/docs/algorithm/9.md)
 * Leetcode算法题
-  * [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
+  * [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/solution/206-fan-zhuan-lian-biao-by-wang-41-ggy4/)
   * [24. 两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)
   * [141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)
   * [142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)
