@@ -184,12 +184,12 @@
   * [74. 搜索二维矩阵](https://leetcode-cn.com/problems/search-a-2d-matrix/solution/74-sou-suo-er-wei-ju-zhen-by-wang-41-ssm3/)
   * [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
   * [153. 寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)
-  * [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
 
 动态规划
 
 * [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
 * [509. 斐波那契数](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
+* [120. 三角形最小路径和](https://leetcode-cn.com/problems/triangle/solution/di-gui-ji-yi-hua-di-gui-dong-tai-gui-hua-gg53/)
 
 贪心算法
 
