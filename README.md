@@ -177,7 +177,7 @@
 深度优先搜索和广度优选搜索
 
 * Leetcode算法题
-* [102. 二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/solution/102-er-cha-shu-de-ceng-xu-bian-li-by-wan-jeky/)
+  * [102. 二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/solution/102-er-cha-shu-de-ceng-xu-bian-li-by-wan-jeky/)
 
 二分查找
 
