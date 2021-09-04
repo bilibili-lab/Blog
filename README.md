@@ -206,6 +206,15 @@
   * [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
   * [153. 寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)
 
+贪心算法
+
+* Leetcode算法题
+  *[860. 柠檬水找零](https://leetcode-cn.com/problems/lemonade-change/description/)
+  *[122. 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/description/)
+  *[455. 分发饼干](https://leetcode-cn.com/problems/assign-cookies/description/)
+  *[874. 模拟行走机器人](https://leetcode-cn.com/problems/walking-robot-simulation/description/)
+  *[45. 跳跃游戏 II](https://leetcode-cn.com/problems/jump-game-ii/)
+
 动态规划
 
 * [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
