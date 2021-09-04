@@ -1,25 +1,38 @@
-var uniquePathsWithObstacles = function (obstacleGrid) {
-    if (obstacleGrid.length === 0) return 0;
-    let m = obstacleGrid.length;
-    let n = obstacleGrid[0].length;
-    // 初始化一个二维数组。
-    let dp = new Array(m).fill(0).map(() => new Array(n).fill(0))
-    // 第一列设置为设置是否有障碍物
-    for (let i = 0; i < m && obstacleGrid[i][0] == 0; i++) {
-        dp[i][0] = 1;
-    }
-    // 第一行设置为设置是否有障碍物
-    for (let j = 0; j < n && obstacleGrid[0][j] == 0; j++) {
-        dp[0][j] = 1;
-    }
-
-    for (let i = 1; i < m; i++) {
-        for (let j = 1; j < n; j++) {
-            if (obstacleGrid[i][j] == 0) {
-                dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+var longestCommonSubsequence = function (text1, text2) {
+    const m = text1.length;
+    const n = text2.length;
+    // 初始化二维数组
+    const dp = new Array(m + 1).fill(0).map(() => new Array(n + 1).fill(0));
+    // console.log(dp)
+    // [ [ 0, 0, 0, 0 ],
+    //   [ 0, 0, 0, 0 ],
+    //   [ 0, 0, 0, 0 ],
+    //   [ 0, 0, 0, 0 ],
+    //   [ 0, 0, 0, 0 ],
+    //   [ 0, 0, 0, 0 ] 
+    // ]
+    for (let i = 1; i <= m; i++) {
+        const c1 = text1[i - 1];
+        for (let j = 1; j <= n; j++) {
+            const c2 = text2[j - 1];
+            if (c1 === c2) {
+                // 如果相等，在 dp[i - 1][j - 1] + 1
+                dp[i][j] = dp[i - 1][j - 1] + 1;
+            } else {
+                // 如果不相等，Math.max(dp[i - 1][j], dp[i][j - 1]);
+                dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
             }
         }
     }
-    return dp[m - 1][n - 1];
+    console.log(dp)
+    // [ [ 0, 0, 0, 0 ],
+    //   [ 0, 1, 1, 1 ],
+    //   [ 0, 1, 1, 1 ],
+    //   [ 0, 1, 2, 2 ],
+    //   [ 0, 1, 2, 2 ],
+    //   [ 0, 1, 2, 3 ] 
+    // ]
+    return dp[m][n];
 };
-console.log(uniquePathsWithObstacles([[0,0,0],[0,1,0],[0,0,0]]))
+
+console.log(longestCommonSubsequence("abcde", "ace"))
