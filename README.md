@@ -44,6 +44,10 @@
 
 * [https](/docs/react/1.md)
 
+## 性能优化
+
+* 合理选用图片
+
 ## 前端安全
 
 * [XSS](/docs/safety/1.md)
@@ -208,7 +212,9 @@
 
 贪心算法
 
+* [贪心算法](/docs/algorithm/10.md)
 * Leetcode算法题
+  *[322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)
   *[860. 柠檬水找零](https://leetcode-cn.com/problems/lemonade-change/description/)
   *[122. 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/description/)
   *[455. 分发饼干](https://leetcode-cn.com/problems/assign-cookies/description/)
@@ -297,3 +303,7 @@ LRU
   * <https://leetcode-cn.com/problems/wildcard-matching>
   * <https://leetcode-cn.com/problems/longest-valid-parentheses>
   * <https://leetcode-cn.com/problems/distinct-subsequences/>
+
+## 手写面试题
+
+* [对象属性路径解析](/docs/interview/1.md)
