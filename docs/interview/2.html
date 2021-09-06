@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="test">
+        <li data-id="1">这是第一条</li>
+        <li data-id="2">这是第二条</li>
+        <li data-id="3">这是第三条</li>
+    </ul>
+</body>
+
+</html>
+<script>
+    document.getElementById('test').onclick =function(event){
+        console.log(event.target.dataset.id)
+    }
+</script>

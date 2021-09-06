@@ -8,6 +8,7 @@
 
 * [垂直居中](/docs/md/5.md)
 * [控制元素显示与隐藏的实现方式](/docs/md/12.md)
+* [link 与 @import 的区别](/docs/md/12.md)
 
 ## 基础
 
@@ -15,7 +16,7 @@
 * [实现 apply、call、bind](/docs/md/2.md)
 * [实现 new 关键字](/docs/md/7.md)
 * [实现 instanceof 关键字](/docs/md/6.md)
-* [实现 Promise.all](/docs/md/9.md)
+* [实现 Promise.all 及错误处理问题](/docs/md/9.md)
 * [实现 数组扁平化的 6 种方式](/docs/md/13.md)
 * [实现 防抖与节流](/docs/md/11.md)
 * [JS 继承 6 种方式](/docs/md/10.md)
@@ -307,3 +308,4 @@ LRU
 ## 手写面试题
 
 * [对象属性路径解析](/docs/interview/1.md)
+* [点击`li`元素的时候输出其输出0、1、2](/docs/interview/2.md)
