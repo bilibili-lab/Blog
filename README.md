@@ -22,15 +22,19 @@
 * [实现 apply、call、bind](/docs/md/2.md)
 * [实现 new 关键字](/docs/md/7.md)
 * [实现 instanceof 关键字](/docs/md/6.md)
-* [实现 Promise](/docs/md/6.md)
-* [实现 Promise.all 及错误处理问题](/docs/md/9.md)
 * [实现 数组扁平化的 6 种方式](/docs/md/13.md)
+* [实现 数组去重](/docs/md/13.md)
 * [实现 防抖与节流](/docs/md/11.md)
-* [实现Event Bus](/docs/interview/2.md)
+* [实现发布订阅 Event Bus](/docs/interview/2.md)
 * [JS 继承 6 种方式](/docs/md/10.md)
 * [JS 获取对象属性方式(遍历)](/docs/md/8.md)
 * [JS == 和 === 和 Object.is 函数的区别](/docs/md/14.md)
+* [实现 Object.is](/docs/md/14.md)
 * [0.1 + 0.2 > 0.3 问题, 如何解决](/docs/interview/2.md)
+* [实现 Promise](/docs/md/6.md)
+* [实现 Promise.all 及错误处理问题](/docs/md/9.md)
+* [实现 有并行限制的 Promise 调度器](/docs/md/9.md)
+* [实现 compose 函数](/docs/md/9.md)
 * 前端二进制(待更新)
 
 ## 浏览器
@@ -51,6 +55,7 @@
 ## TS
 
 * [JSDoc规范](https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html)
+* [实现内置工具类型](https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html)
 
 ## 网络
 
@@ -219,8 +224,8 @@
   * [69. x 的平方根](https://leetcode-cn.com/problems/sqrtx/solution/x-de-ping-fang-gen-er-fen-cha-zhao-by-wa-wuwr/)
   * [367. 有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square/solution/367-you-xiao-de-wan-quan-ping-fang-shu-b-n908/)
   * [74. 搜索二维矩阵](https://leetcode-cn.com/problems/search-a-2d-matrix/solution/74-sou-suo-er-wei-ju-zhen-by-wang-41-ssm3/)
-  * [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
-  * [153. 寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)
+  * [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/solution/33-sou-suo-xuan-zhuan-pai-xu-shu-zu-by-w-0xrk/)
+  * [153. 寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/solution/153-xun-zhao-xuan-zhuan-pai-xu-shu-zu-zh-12cn/)
 
 贪心算法
 
@@ -271,6 +276,7 @@ LRU
 字符串算法
 
 * 基础算法
+  * [165. 比较版本号](https://leetcode-cn.com/problems/compare-version-numbers/solution/bi-jiao-ban-ben-hao-by-wang-41-4si9/)
   * [709. 转换成小写字母](https://leetcode-cn.com/problems/to-lower-case/)
   * [58. 最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/)
   * [771. 宝石与石头](https://leetcode-cn.com/problems/jewels-and-stones/)
@@ -327,5 +333,9 @@ LRU
 * [实现图片懒加载](/docs/interview/2.md)
 * [实现 trim 函数](/docs/interview/2.md)
 * [实现 Object.create() 函数](/docs/interview/2.md)
-* [比较版本](/docs/interview/2.md)
 * [实现倒计时](/docs/interview/2.md)
+* [settimeout 模拟实现 setinterval(带清除定时器的版本)](/docs/interview/2.md)
+* [实现模板字符串解析功能](/docs/interview/2.md)
+* [实现 LazyMan](/docs/interview/2.md)
+* [实现 add 函数](/docs/interview/2.md)
+* [分片思想解决大数据量渲染问题](https://juejin.cn/post/6968713283884974088#heading-30)
