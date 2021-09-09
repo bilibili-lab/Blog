@@ -18,6 +18,7 @@
 
 ## 基础
 
+* [实现 Url 查询参数解析](/docs/md/1.md)
 * [实现 深浅拷贝](/docs/md/1.md)
 * [实现 apply、call、bind](/docs/md/2.md)
 * [实现 new 关键字](/docs/md/7.md)
@@ -25,7 +26,7 @@
 * [实现 数组扁平化的 6 种方式](/docs/md/13.md)
 * [实现 数组去重](/docs/md/13.md)
 * [实现 防抖与节流](/docs/md/11.md)
-* [实现发布订阅 Event Bus](/docs/interview/2.md)
+* [实现 发布订阅 Event Bus](/docs/interview/2.md)
 * [JS 继承 6 种方式](/docs/md/10.md)
 * [JS 获取对象属性方式(遍历)](/docs/md/8.md)
 * [JS == 和 === 和 Object.is 函数的区别](/docs/md/14.md)
@@ -192,7 +193,7 @@
   * [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
   * [509. 斐波那契数](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
   * [22. 括号生成](https://leetcode-cn.com/problems/generate-parentheses/)
-  * [226. 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/description/)
+  * [226. 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/solution/226-fan-zhuan-er-cha-shu-by-wang-41-yr9a/)
   * [98. 验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)
   * [104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree)
   * [111. 二叉树的最小深度](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/)
@@ -284,7 +285,7 @@ LRU
   * [8. 字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/)
 * 字符串操作问题
   * [14. 最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/description/)
-  * [344. 反转字符串](https://leetcode-cn.com/problems/reverse-string)
+  * [344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/solution/344-fan-zhuan-zi-fu-chuan-by-wang-41-rdvy/)
   * [541. 反转字符串 II](https://leetcode-cn.com/problems/reverse-string-ii/)
   * [151. 翻转字符串里的单词](https://leetcode-cn.com/problems/reverse-words-in-a-string/)
   * [557. 反转字符串中的单词 III](https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/)
