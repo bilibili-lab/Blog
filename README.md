@@ -36,6 +36,7 @@
 * [实现 Promise.all 及错误处理问题](/docs/md/9.md)
 * [实现 有并行限制的 Promise 调度器](/docs/md/9.md)
 * [实现 compose 函数](/docs/md/9.md)
+* [请解码被多次编码的 URL](/docs/md/16.md)
 * 前端二进制(待更新)
 
 ## 浏览器
@@ -44,7 +45,7 @@
 * [浏览器同源策略与跨域解决方案](/docs/md/3.md)
 * [浏览器缓存策略](/docs/md/4.md)
 * [重排与重绘, 如何避免](/docs/md/4.md)
-* [输入url后发生了什么](/docs/md/4.md)
+* [输入 URL 后发生了什么](/docs/md/4.md)
 * 内存管理及垃圾回收机制(待更新)
 * 浏览器存储(待更新)
 
@@ -137,6 +138,7 @@
 数组
 
 * Leetcode算法题
+  * [随机打乱数组](/docs/interview/2.md)
   * [1. 两数之和](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-bao-ji-jie-fa-he-ha-xi-4ghcz/)
   * [15. 三数之和](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-bao-ji-jie-fa-he-ha-xi-4ghcz/)
   * [11. 盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/solution/sheng-zui-duo-shui-de-rong-qi-shuang-zhi-sp94/)
@@ -200,7 +202,7 @@
   * [297. 二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/)
   * [236. 二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)
   * [105. 从前序与中序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal)
-  * [77. 组合](https://leetcode-cn.com/problems/combinations/)
+  * [77. 组合](https://leetcode-cn.com/problems/combinations/solution/javascript-9xing-di-gui-hui-su-77-zu-he-by-autumna/)
   * [46. 全排列](https://leetcode-cn.com/problems/permutations/)
   * [47. 全排列 II](https://leetcode-cn.com/problems/permutations-ii/)
 
@@ -328,10 +330,9 @@ LRU
 * [对象属性路径解析](/docs/interview/1.md)
 * [点击`li`元素的时候输出其输出0、1、2](/docs/interview/2.md)
 * [数字千分位](/docs/interview/2.md)
-* [随机打乱数组](/docs/interview/2.md)
 * [字符串转驼峰](/docs/interview/2.md)
 * [rem 基本设置](/docs/interview/2.md)
-* [实现图片懒加载](/docs/interview/2.md)
+* [实现 图片懒加载](/docs/interview/2.md)
 * [实现 trim 函数](/docs/interview/2.md)
 * [实现 Object.create() 函数](/docs/interview/2.md)
 * [实现倒计时](/docs/interview/2.md)
