@@ -138,7 +138,7 @@
 数组
 
 * Leetcode算法题
-  * [随机打乱数组](/docs/interview/2.md)
+  * [随机打乱数组/洗牌算法](/docs/interview/11.md)
   * [1. 两数之和](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-bao-ji-jie-fa-he-ha-xi-4ghcz/)
   * [15. 三数之和](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-bao-ji-jie-fa-he-ha-xi-4ghcz/)
   * [11. 盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/solution/sheng-zui-duo-shui-de-rong-qi-shuang-zhi-sp94/)
@@ -236,12 +236,12 @@
 
 * [贪心算法](/docs/algorithm/10.md)
 * Leetcode算法题
-  *[322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)
-  *[860. 柠檬水找零](https://leetcode-cn.com/problems/lemonade-change/description/)
-  *[122. 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/description/)
-  *[455. 分发饼干](https://leetcode-cn.com/problems/assign-cookies/description/)
-  *[874. 模拟行走机器人](https://leetcode-cn.com/problems/walking-robot-simulation/description/)
-  *[45. 跳跃游戏 II](https://leetcode-cn.com/problems/jump-game-ii/)
+  * [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)
+  * [860. 柠檬水找零](https://leetcode-cn.com/problems/lemonade-change/description/)
+  * [122. 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/description/)
+  * [455. 分发饼干](https://leetcode-cn.com/problems/assign-cookies/description/)
+  * [874. 模拟行走机器人](https://leetcode-cn.com/problems/walking-robot-simulation/description/)
+  * [45. 跳跃游戏 II](https://leetcode-cn.com/problems/jump-game-ii/)
 
 动态规划
 
