@@ -203,7 +203,7 @@
   * [236. 二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)
   * [105. 从前序与中序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal)
   * [77. 组合](https://leetcode-cn.com/problems/combinations/solution/javascript-9xing-di-gui-hui-su-77-zu-he-by-autumna/)
-  * [46. 全排列](https://leetcode-cn.com/problems/permutations/)
+  * [46. 全排列](https://leetcode-cn.com/problems/permutations/solution/46-quan-pai-lie-by-wang-41-fi6a/)
   * [47. 全排列 II](https://leetcode-cn.com/problems/permutations-ii/)
 
 分治、回溯
