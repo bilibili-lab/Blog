@@ -194,7 +194,7 @@
 * Leetcode算法题
   * [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
   * [509. 斐波那契数](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
-  * [22. 括号生成](https://leetcode-cn.com/problems/generate-parentheses/)
+  * [22. 括号生成](https://leetcode-cn.com/problems/generate-parentheses/solution/22-gua-hao-sheng-cheng-by-wang-41-f9tl//)
   * [226. 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/solution/226-fan-zhuan-er-cha-shu-by-wang-41-yr9a/)
   * [98. 验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)
   * [104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree)
@@ -211,11 +211,13 @@
 深度优先搜索和广度优选搜索
 
 * Leetcode算法题
+  * [22. 括号生成](https://leetcode-cn.com/problems/generate-parentheses/solution/22-gua-hao-sheng-cheng-by-wang-41-f9tl/)
   * [102. 二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/solution/102-er-cha-shu-de-ceng-xu-bian-li-by-wan-jeky/)
+  * [515. 在每个树行中找最大值](https://leetcode-cn.com/problems/find-largest-value-in-each-tree-row/solution/515-zai-mei-ge-shu-xing-zhong-zhao-zui-d-w282/)
+  * [127. 单词接龙](https://leetcode-cn.com/problems/word-ladder/description/)
+  * [257. 二叉树的所有路径](https://leetcode-cn.com/problems/binary-tree-paths/)
   * [433. 最小基因变化](https://leetcode-cn.com/problems/minimum-genetic-mutation/#/description)
   * [22. 括号生成](https://leetcode-cn.com/problems/minimum-genetic-mutation/#/description)
-  * [515. 在每个树行中找最大值](https://leetcode-cn.com/problems/find-largest-value-in-each-tree-row/#/description)
-  * [127. 单词接龙](https://leetcode-cn.com/problems/word-ladder/description/)
   * [126. 单词接龙 II](https://leetcode-cn.com/problems/word-ladder-ii/description/)
   * [200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)
   * [529. 扫雷游戏](https://leetcode-cn.com/problems/minesweeper/description/)
