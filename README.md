@@ -36,7 +36,7 @@
 * [实现 Promise.all 及错误处理问题](/docs/md/9.md)
 * [实现 有并行限制的 Promise 调度器](/docs/md/9.md)
 * [实现 compose 函数](/docs/md/9.md)
-* [请解码被多次编码的 URL](/docs/md/16.md)
+* [解码被多次编码的 URL](/docs/md/16.md)
 * 前端二进制(待更新)
 
 ## 浏览器
@@ -217,7 +217,7 @@
   * [127. 单词接龙](https://leetcode-cn.com/problems/word-ladder/description/)
   * [257. 二叉树的所有路径](https://leetcode-cn.com/problems/binary-tree-paths/)
   * [433. 最小基因变化](https://leetcode-cn.com/problems/minimum-genetic-mutation/#/description)
-  * [22. 括号生成](https://leetcode-cn.com/problems/minimum-genetic-mutation/#/description)
+  * [433. 最小基因变化](https://leetcode-cn.com/problems/minimum-genetic-mutation/#/description)
   * [126. 单词接龙 II](https://leetcode-cn.com/problems/word-ladder-ii/description/)
   * [200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)
   * [529. 扫雷游戏](https://leetcode-cn.com/problems/minesweeper/description/)
@@ -261,7 +261,6 @@
 
 LRU
 
-* [LRU算法基本概念](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
 * Leetcode算法题
   * [146. LRU 缓存机制](https://leetcode-cn.com/problems/lru-cache/#/)
 
