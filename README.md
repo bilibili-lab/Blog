@@ -26,7 +26,7 @@
 * [实现 数组扁平化的 6 种方式](/docs/md/13.md)
 * [实现 数组去重](/docs/md/13.md)
 * [实现 防抖与节流](/docs/md/11.md)
-* [实现 发布订阅 Event Bus](/docs/interview/2.md)
+* [实现 EventEmitter](/docs/interview/2.md)
 * [JS 继承 6 种方式](/docs/md/10.md)
 * [JS 获取对象属性方式(遍历)](/docs/md/8.md)
 * [JS == 和 === 和 Object.is 函数的区别](/docs/md/14.md)
@@ -209,17 +209,16 @@
 分治、回溯
 
 * Leetcode算法题
-  *[50. Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)
-  *[78. 子集](https://leetcode-cn.com/problems/subsets/)
-  *[169. 多数元素](https://leetcode-cn.com/problems/majority-element/description/)
-  *[17. 电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number//)
-  *[51. N 皇后](https://leetcode-cn.com/problems/n-queens/)
+  * [50. Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)
+  * [78. 子集](https://leetcode-cn.com/problems/subsets/)
+  * [169. 多数元素](https://leetcode-cn.com/problems/majority-element/description/)
+  * [17. 电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number//)
+  * [51. N 皇后](https://leetcode-cn.com/problems/n-queens/)
 
 深度优先搜索和广度优选搜索
 
 * Leetcode算法题
   * [22. 括号生成](https://leetcode-cn.com/problems/generate-parentheses/solution/22-gua-hao-sheng-cheng-by-wang-41-f9tl/)
-  * [102. 二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/solution/102-er-cha-shu-de-ceng-xu-bian-li-by-wan-jeky/)
   * [102. 二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/solution/102-er-cha-shu-de-ceng-xu-bian-li-by-wan-jeky/)
   * [515. 二叉树的右视图](https://leetcode-cn.com/problems/binary-tree-right-side-view/solution/199-er-cha-shu-de-you-shi-tu-by-wang-41-vatv/)
   * [127. 单词接龙](https://leetcode-cn.com/problems/word-ladder/description/)
