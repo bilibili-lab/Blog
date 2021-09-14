@@ -15,13 +15,13 @@ Promise.reject('1').finally(() => {
 
 
 Promise.resolve('1').finally(() => {
-    return new Promise((resolve,reject) => {
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
             reject('2')
         }, 2000)
     })
 }).then(data => {
-    console.log('data', data); 
+    console.log('data', data);
 }, (err) => {
     console.log('err', err);  // err 2
 })
@@ -36,5 +36,18 @@ Promise.prototype.finally = (callback) => {
         // callback 的返回值可能还是一个 promise， 需要等 promise 执行完成
         // 如果 callback 返回一个失败状态的的 promise，则传败该失败状态的promise的值。
         Promise.resolve(callback()).then(() => { throw err })
+    })
+}
+
+Promise.race = function (promiseArr = []) {
+    return new Promise((resolve, reject) => {
+        for (let i = 0; i < promiseArr.length; i++) {
+            let p = promiseArr[i];
+            if (p && typeof p === 'function') {
+                p.then(resolve, reject)
+            } else {
+                resolve(p)
+            }
+        }
     })
 }

@@ -26,7 +26,7 @@
 * [实现 数组扁平化的 6 种方式](/docs/md/13.md)
 * [实现 数组去重](/docs/md/13.md)
 * [实现 防抖与节流](/docs/md/11.md)
-* [实现 EventEmitter](/docs/interview/2.md)
+* [实现 EventEmitter](/docs/interview/17.md)
 * [JS 继承 6 种方式](/docs/md/10.md)
 * [JS 获取对象属性方式(遍历)](/docs/md/8.md)
 * [JS == 和 === 和 Object.is 函数的区别](/docs/md/14.md)
@@ -168,7 +168,7 @@
 * Leetcode算法题
   * [20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/solution/you-xiao-de-gua-hao-zhan-jie-fa-he-xun-h-m8ro/)
   * [84. 柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)
-  * [155. 最小栈](https://leetcode-cn.com/problems/min-stack/solution/zui-xiao-zhan-by-leetcode-solution/)
+  * [155. 最小栈](https://leetcode-cn.com/problems/min-stack/solution/155-zui-xiao-zhan-by-wang-41-2756/)
 
 队列
 
