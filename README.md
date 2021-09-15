@@ -18,6 +18,8 @@
 
 ## 基础
 
+* [类型转换：强制转换、隐式转换](/docs/md/18.md)
+* [如何终止 forEach 循环](/docs/md/18.md)
 * [实现 Url 查询参数解析](/docs/md/1.md)
 * [实现 深浅拷贝](/docs/md/1.md)
 * [实现 apply、call、bind](/docs/md/2.md)
