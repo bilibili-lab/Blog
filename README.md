@@ -18,7 +18,7 @@
 
 ## 基础
 
-* [类型转换：强制转换、隐式转换](/docs/md/18.md)
+* [类型转换：强制转换、隐式转换](/docs/md/19.md)
 * [如何终止 forEach 循环](/docs/md/18.md)
 * [实现 Url 查询参数解析](/docs/md/1.md)
 * [实现 深浅拷贝](/docs/md/1.md)
@@ -29,16 +29,16 @@
 * [实现 数组去重](/docs/md/13.md)
 * [实现 防抖与节流](/docs/md/11.md)
 * [实现 EventEmitter](/docs/interview/17.md)
-* [JS 继承 6 种方式](/docs/md/10.md)
-* [JS 获取对象属性方式(遍历)](/docs/md/8.md)
-* [JS == 和 === 和 Object.is 函数的区别](/docs/md/14.md)
-* [实现 Object.is](/docs/md/14.md)
-* [0.1 + 0.2 > 0.3 问题, 如何解决](/docs/interview/2.md)
 * [实现 Promise](/docs/md/6.md)
 * [实现 Promise.all 、Promise.race、Promise.prototype.finally()](/docs/md/9.md)
 * [实现 Promise 超时中断如何实现](/docs/md/9.md)
 * [实现 有并行限制的 Promise 调度器](/docs/md/9.md)
 * [实现 compose 函数](/docs/md/9.md)
+* [JS 继承 6 种方式](/docs/md/10.md)
+* [JS 获取对象属性方式(遍历)](/docs/md/8.md)
+* [JS == 和 === 和 Object.is 函数的区别](/docs/md/14.md)
+* [实现 Object.is](/docs/md/14.md)
+* [0.1 + 0.2 > 0.3 问题, 如何解决](/docs/interview/2.md)
 * [解码被多次编码的 URL](/docs/md/16.md)
 * 前端二进制(待更新)
 
@@ -65,6 +65,7 @@
 ## 网络
 
 * [https](/docs/react/1.md)
+* [DNS解析](/docs/network/1.md)
 
 ## 性能优化
 
@@ -143,12 +144,12 @@
 * Leetcode算法题
   * [随机打乱数组/洗牌算法](/docs/interview/11.md)
   * [1. 两数之和](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-bao-ji-jie-fa-he-ha-xi-4ghcz/)
-  * [15. 三数之和](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-bao-ji-jie-fa-he-ha-xi-4ghcz/)
+  * [15. 三数之和](https://leetcode-cn.com/problems/3sum/solution/15-san-shu-zhi-he-by-wang-41-57nr/)
   * [11. 盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/solution/sheng-zui-duo-shui-de-rong-qi-shuang-zhi-sp94/)
   * [26. 删除有序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
   * [66. 加一](https://leetcode-cn.com/problems/plus-one/solution/javascript-jia-yi-tong-su-yi-dong-by-wan-wnmu/)
   * [88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)
-  * [189. 旋转数组](https://leetcode-cn.com/problems/rotate-array/)
+  * [189. 旋转数组](https://leetcode-cn.com/problems/rotate-array/solution/189-xuan-zhuan-shu-zu-by-wang-41-2dfb/)
   * [283. 移动零](https://leetcode-cn.com/problems/move-zeroes/solution/yi-dong-ling-shuang-zhi-zhen-liang-ci-bi-a47b/)
 
 链表
@@ -256,6 +257,7 @@
 动态规划
 
 * [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
+* [746. 使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/)
 * [509. 斐波那契数](https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-kan-zhe-pian-jiu-zu-gou-liao-b-igkj/)
 * [1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/solution/1143-zui-chang-gong-gong-zi-xu-lie-by-wa-7qcc/)
 * [62. 不同路径](https://leetcode-cn.com/problems/unique-paths/solution/62-bu-tong-lu-jing-by-wang-41-yy8g/)
