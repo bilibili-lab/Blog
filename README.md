@@ -142,7 +142,7 @@
 数组
 
 * Leetcode算法题
-  * [随机打乱数组/洗牌算法](/docs/interview/11.md)
+  * [随机打乱数组/洗牌算法](/docs/algorithm/11.md)
   * [1. 两数之和](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-bao-ji-jie-fa-he-ha-xi-4ghcz/)
   * [15. 三数之和](https://leetcode-cn.com/problems/3sum/solution/15-san-shu-zhi-he-by-wang-41-57nr/)
   * [11. 盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/solution/sheng-zui-duo-shui-de-rong-qi-shuang-zhi-sp94/)
