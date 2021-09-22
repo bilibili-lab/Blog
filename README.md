@@ -20,7 +20,7 @@
 
 * [类型转换：强制转换、隐式转换](/docs/md/19.md)
 * [如何终止 forEach 循环](/docs/md/18.md)
-* [实现 Url 查询参数解析](/docs/md/1.md)
+* [实现 Url 查询参数解析](/docs/md/20.md)
 * [实现 深浅拷贝](/docs/md/1.md)
 * [实现 apply、call、bind](/docs/md/2.md)
 * [实现 new 关键字](/docs/md/7.md)
@@ -296,7 +296,8 @@ LRU
   * [709. 转换成小写字母](https://leetcode-cn.com/problems/to-lower-case/)
   * [58. 最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/)
   * [771. 宝石与石头](https://leetcode-cn.com/problems/jewels-and-stones/)
-  * [387. 字符串中的第一个唯一字符](https://leetcode-cn.com/problems/first-unique-character-in-a-string/)
+  * [387. 字符串中的第一个唯一字符](https://leetcode-cn.com/problems/first-unique-character-in-a-string/solution/387-zi-fu-chuan-zhong-de-di-yi-ge-wei-yi-htvc/)
+  * [剑指 Offer 50. 第一个只出现一次的字符](https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/solution/jian-zhi-offer-50-di-yi-ge-zhi-chu-xian-9lo8e/)
   * [8. 字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/)
 * 字符串操作问题
   * [14. 最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/description/)
