@@ -300,7 +300,7 @@ LRU
   * [剑指 Offer 50. 第一个只出现一次的字符](https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/solution/jian-zhi-offer-50-di-yi-ge-zhi-chu-xian-9lo8e/)
   * [8. 字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/)
 * 字符串操作问题
-  * [14. 最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/description/)
+  * [14. 最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/solution/14-zui-chang-gong-gong-qian-zhui-by-wang-msau/)
   * [344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/solution/344-fan-zhuan-zi-fu-chuan-by-wang-41-rdvy/)
   * [541. 反转字符串 II](https://leetcode-cn.com/problems/reverse-string-ii/)
   * [151. 翻转字符串里的单词](https://leetcode-cn.com/problems/reverse-words-in-a-string/)
