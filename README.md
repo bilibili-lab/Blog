@@ -316,7 +316,7 @@ LRU
   * [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)
 
 * 最长子串、子序列问题
-  * <https://leetcode-cn.com/problems/longest-common-subsequence/>
+  * [1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/solution/1143-zui-chang-gong-gong-zi-xu-lie-by-wa-7qcc/)
   * <https://leetcode-cn.com/problems/edit-distance/>
   * <https://leetcode-cn.com/problems/longest-palindromic-substring/>
 * 字符串 +DP 问题
