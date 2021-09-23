@@ -158,7 +158,7 @@
 * [双向链表的基本概念和实现](/docs/algorithm/9.md)
 * Leetcode算法题
   * [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/solution/206-fan-zhuan-lian-biao-by-wang-41-ggy4/)
-  * [24. 两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)
+  * [24. 两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/solution/24-liang-liang-jiao-huan-lian-biao-zhong-7neh/)
   * [141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/solution/141-huan-xing-lian-biao-by-wang-41-dei8/)
   * [142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)
   * [25. K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)
@@ -283,7 +283,7 @@ LRU
   * [冒泡排序](https://leetcode-cn.com/problems/sort-an-array/solution/tu-jie-jing-dian-pai-xu-by-wang-41/)
   * [选择排序](https://leetcode-cn.com/problems/sort-an-array/solution/tu-jie-jing-dian-pai-xu-by-wang-41/)
   * [插入排序](https://leetcode-cn.com/problems/sort-an-array/solution/tu-jie-jing-dian-pai-xu-by-wang-41/)
-  * [快速排序](https://leetcode-cn.com/problems/sort-an-array/solution/tu-jie-jing-dian-pai-xu-by-wang-41/)
+  * [快速排序](https://leetcode-cn.com/problems/sort-an-array/solution/tu-jie-jing-dian-pai-x·u-by-wang-41/)
 
 布隆过滤器
 
