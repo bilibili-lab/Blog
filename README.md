@@ -162,6 +162,7 @@
   * [141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/solution/141-huan-xing-lian-biao-by-wang-41-dei8/)
   * [142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)
   * [25. K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)
+  * [21. 合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/solution/21-he-bing-liang-ge-you-xu-lian-biao-by-6udf6/)
 
 跳表
   
