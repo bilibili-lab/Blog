@@ -40,6 +40,7 @@
 * [实现 Object.is](/docs/md/14.md)
 * [0.1 + 0.2 > 0.3 问题, 如何解决](/docs/interview/2.md)
 * [解码被多次编码的 URL](/docs/md/16.md)
+
 * 前端二进制(待更新)
 
 ## 浏览器
@@ -233,6 +234,7 @@
   * [126. 单词接龙 II](https://leetcode-cn.com/problems/word-ladder-ii/description/)
   * [200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)
   * [529. 扫雷游戏](https://leetcode-cn.com/problems/minesweeper/description/)
+  * [543. 二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/)
 
 二分查找
 
