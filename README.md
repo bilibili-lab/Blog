@@ -29,7 +29,7 @@
 * [实现 数组去重](/docs/md/13.md)
 * [实现 防抖与节流](/docs/md/11.md)
 * [实现 EventEmitter](/docs/interview/17.md)
-* [实现 Promise](/docs/md/6.md)
+* [实现 PromiseA+ 规范](/docs/promise/1.md)
 * [实现 Promise.all 、Promise.race、Promise.prototype.finally()](/docs/md/9.md)
 * [实现 Promise 超时中断如何实现](/docs/md/9.md)
 * [实现 有并行限制的 Promise 调度器](/docs/md/9.md)

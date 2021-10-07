@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "test:promise": "promises-aplus-tests ./docs/promise/1.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.6.0",
-    "@vuepress/plugin-blog": "^1.9.2"
+    "@vuepress/plugin-blog": "^1.9.2",
+    "promises-aplus-tests": "^2.1.2"
   }
 }
