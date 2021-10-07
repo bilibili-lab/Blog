@@ -161,9 +161,11 @@
   * [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/solution/206-fan-zhuan-lian-biao-by-wang-41-ggy4/)
   * [24. 两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/solution/24-liang-liang-jiao-huan-lian-biao-zhong-7neh/)
   * [141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/solution/141-huan-xing-lian-biao-by-wang-41-dei8/)
-  * [142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)
-  * [25. K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)
+  * [142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/solution/142-huan-xing-lian-biao-ii-by-wang-41-sz4q/)
+  * [25. K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/solution/25-k-ge-yi-zu-fan-zhuan-lian-biao-by-wan-7dmu/)
   * [21. 合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/solution/21-he-bing-liang-ge-you-xu-lian-biao-by-6udf6/)
+  * [83. 删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/solution/83-shan-chu-pai-xu-lian-biao-zhong-de-zh-x18h/)
+  * [83. 删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/solution/83-shan-chu-pai-xu-lian-biao-zhong-de-zh-x18h/)
 
 跳表
   
@@ -203,8 +205,8 @@
   * [22. 括号生成](https://leetcode-cn.com/problems/generate-parentheses/solution/22-gua-hao-sheng-cheng-by-wang-41-f9tl//)
   * [226. 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/solution/226-fan-zhuan-er-cha-shu-by-wang-41-yr9a/)
   * [98. 验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)
-  * [104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree)
-  * [111. 二叉树的最小深度](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/)
+  * [104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/solution/104-er-cha-shu-de-zui-da-shen-du-by-wang-un3z/)
+  * [111. 二叉树的最小深度](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/solution/111-er-cha-shu-de-zui-xiao-shen-du-by-wa-7g37/)
   * [297. 二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/)
   * [236. 二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)
   * [105. 从前序与中序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal)
@@ -232,7 +234,7 @@
   * [433. 最小基因变化](https://leetcode-cn.com/problems/minimum-genetic-mutation/#/description)
   * [433. 最小基因变化](https://leetcode-cn.com/problems/minimum-genetic-mutation/#/description)
   * [126. 单词接龙 II](https://leetcode-cn.com/problems/word-ladder-ii/description/)
-  * [200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)
+  * [200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/solution/200-dao-yu-shu-liang-by-wang-41-1k1i/)
   * [529. 扫雷游戏](https://leetcode-cn.com/problems/minesweeper/description/)
   * [543. 二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/)
 
